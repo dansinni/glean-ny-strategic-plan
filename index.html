@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+</head>
+<body>
+<title>Glean New York Majors Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A New York Strategic Accounts plan for Glean: where Glean wins, how the team sells it, and the first 90 days. Prepared by Dan Sinni.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap">
+<style>
+/* Layout: editorial pre-read on a centered track with faint rails. Warm paper from Glean's brand art, Glean blue as the single accent, lime used once as a highlight and on the blue panels. Sans heads, serif prose, mono indexes. */
+:root{
+  --paper:#FAF7F3; --surface:#FFFFFF; --ink:#11132E; --muted:#5E6079; --line:#E7E3E6; --line-strong:#D2CED8;
+  --accent:#343CED; --accent-soft:#ECEDFE; --on-accent:#FFFFFF;
+  --lime:#D8FD49; --on-lime:#11132E; --logo:#343CED;
+  --inv-bg:#343CED; --inv-fg:#FFFFFF; --inv-muted:#CDD0FF; --inv-accent:#D8FD49;
+  --ok:#17804A; --warn:#A35F00; --crit:#C2341A;
+  --st-done:#17804A; --st-prog:#A35F00; --st-rev:#343CED; --st-inv:#C2410C; --st-q:#8B8883;
+  --f-head:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --track:1120px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0D0E1F; --surface:#15172C; --ink:#EEEEF7; --muted:#A0A2BC; --line:#262842; --line-strong:#36395C;
+  --accent:#9097FF; --accent-soft:#1E2150; --on-accent:#0D0E1F;
+  --lime:#D8FD49; --on-lime:#11132E; --logo:#FFFFFF;
+  --inv-bg:#2A31C9; --inv-fg:#FFFFFF; --inv-muted:#CDD0FF; --inv-accent:#D8FD49;
+  --ok:#4FC283; --warn:#E3A34B; --crit:#F0805C;
+  --st-done:#4FC283; --st-prog:#E3A34B; --st-rev:#9097FF; --st-inv:#F0805C; --st-q:#8B8883;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0D0E1F; --surface:#15172C; --ink:#EEEEF7; --muted:#A0A2BC; --line:#262842; --line-strong:#36395C;
+  --accent:#9097FF; --accent-soft:#1E2150; --on-accent:#0D0E1F;
+  --lime:#D8FD49; --on-lime:#11132E; --logo:#FFFFFF;
+  --inv-bg:#2A31C9; --inv-fg:#FFFFFF; --inv-muted:#CDD0FF; --inv-accent:#D8FD49;
+  --ok:#4FC283; --warn:#E3A34B; --crit:#F0805C;
+  --st-done:#4FC283; --st-prog:#E3A34B; --st-rev:#9097FF; --st-inv:#F0805C; --st-q:#8B8883;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 15.5px/1.6 var(--f-head);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+.rails{position:fixed;inset:0;pointer-events:none;z-index:0}
+.rails::before,.rails::after{content:"";position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
+.rails::before{left:calc(50% - var(--track)/2 - 1px)}
+.rails::after{right:calc(50% - var(--track)/2 - 1px)}
+@media (max-width:1180px){.rails{display:none}}
+main,nav{position:relative;z-index:1}
+a{color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--track);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:1180px){.wrap{padding-left:28px;padding-right:28px}}
+h1,h2,h3,h4{font-family:var(--f-head);font-weight:400;line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.03em}
+h2{font-size:clamp(1.9rem,3.8vw,2.7rem)}
+h3{font-size:1.3rem;font-weight:500;letter-spacing:-.02em}
+h4{font:500 .7rem/1.2 var(--f-mono);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+p{margin:0}
+.lede{color:var(--muted);max-width:62ch;font:400 1.08rem/1.6 var(--f-serif)}
+.serif{font-family:var(--f-serif)}
+.eyebrow{font:400 .74rem/1 var(--f-mono);letter-spacing:.06em;color:var(--muted);display:flex;gap:.9em;align-items:center}
+.eyebrow b{color:var(--accent);font-weight:500}
+sup.fn{font:500 .62rem/1 var(--f-mono);vertical-align:super;margin-left:1px}
+sup.fn a{text-decoration:none;padding:0 2px;border-radius:3px;color:var(--accent);background:var(--accent-soft)}
+.num{font-variant-numeric:tabular-nums}
+
+/* logo */
+.logo{display:block;height:20px;width:auto;aspect-ratio:160/38;color:var(--ink);flex:none}
+.logo-nav{height:15px}
+.logo-hero{height:30px}
+.forco{display:flex;align-items:center;gap:12px;padding-right:16px;border-right:1px solid var(--line-strong)}
+.forco span{white-space:nowrap}
+@media (max-width:560px){.forco{border-right:0;padding-right:0;width:100%}}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:58px}
+.brand{display:flex;align-items:center;gap:8px;font:500 1.05rem/1 var(--f-head);letter-spacing:-.02em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand span{font:400 .7rem/1 var(--f-mono);color:var(--muted);letter-spacing:.04em}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:0;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.nav ul::-webkit-scrollbar{display:none}
+.nav ul a{display:block;padding:8px 9px;font:400 .88rem/1 var(--f-head);color:var(--ink);text-decoration:none;white-space:nowrap;opacity:.72}
+.nav ul a:hover{opacity:1}
+.nav ul a.on{color:var(--accent);opacity:1}
+.btn{display:inline-flex;align-items:center;gap:.5em;font:500 .9rem/1 var(--f-head);padding:11px 18px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none;cursor:pointer;white-space:nowrap;letter-spacing:-.01em}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.btn:hover{opacity:.86}
+.btn:disabled{opacity:.35;cursor:default}
+@media (max-width:720px){.nav .btn{display:none}}
+
+/* sections */
+section{padding-block:84px;border-bottom:1px solid var(--line)}
+.sec-head{display:grid;gap:14px;margin-bottom:40px}
+
+/* hero */
+.hero{padding-block:52px 64px}
+.prepared{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font:400 .8rem/1.4 var(--f-mono);color:var(--muted);margin-bottom:30px}
+.prepared strong{color:var(--ink);font-weight:500}
+.tag{font:500 .72rem/1 var(--f-mono);letter-spacing:.04em;padding:7px 11px;border-radius:999px;border:1px solid var(--line-strong);color:var(--ink);background:var(--surface)}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4.1rem);max-width:19ch;letter-spacing:-.04em;line-height:1.02}
+.hero .lede{margin-top:20px;font-size:1.15rem}
+.hero .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+
+/* session panel (app-style) */
+.boardwrap{margin-top:48px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);border:1px solid var(--line-strong);border-radius:14px;overflow:hidden;background:var(--surface);box-shadow:0 1px 2px rgba(0,0,0,.04),0 30px 60px -40px rgba(0,0,0,.28)}
+@media (max-width:900px){.boardwrap{grid-template-columns:1fr}}
+.chrome{grid-column:1/-1;display:flex;align-items:center;gap:14px;padding:11px 16px;border-bottom:1px solid var(--line);background:var(--paper)}
+.chrome .dots{display:flex;gap:6px}
+.chrome .dots i{width:10px;height:10px;border-radius:50%;background:var(--line-strong);display:block}
+.chrome span{font:400 .74rem/1 var(--f-mono);color:var(--muted);letter-spacing:.02em}
+.chrome em{margin-left:auto;font:400 .7rem/1 var(--f-mono);font-style:normal;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 9px}
+.board{padding:14px 10px 10px;min-width:0}
+.board-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:4px 8px 10px}
+.board-top h3{font-size:1.05rem}
+.board-top small{font:400 .7rem/1.3 var(--f-mono);color:var(--muted)}
+.brow{display:grid;grid-template-columns:52px minmax(0,1fr) 104px 128px;gap:12px;align-items:center;width:100%;text-align:left;padding:11px 8px;border:0;border-radius:8px;background:transparent;color:var(--ink);font:400 .9rem/1.3 var(--f-head);cursor:pointer;letter-spacing:-.005em}
+.brow.head{cursor:default;font:400 .66rem/1 var(--f-mono);letter-spacing:.08em;color:var(--muted);text-transform:uppercase;padding-block:6px;border-bottom:1px solid var(--line);border-radius:0;margin-bottom:4px}
+.brow:not(.head):hover{background:var(--paper)}
+.brow.sel{background:var(--accent-soft)}
+.brow .t{font:400 .76rem/1 var(--f-mono);color:var(--muted)}
+.brow .task{color:var(--ink)}
+.brow .ag{color:var(--muted);font:400 .74rem/1.2 var(--f-mono)}
+.st{display:inline-flex;align-items:center;gap:7px;font:500 .68rem/1 var(--f-mono);letter-spacing:.04em;justify-self:start;white-space:nowrap;text-transform:lowercase}
+.st::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.st.done{color:var(--st-done)}.st.prog{color:var(--st-prog)}.st.rev{color:var(--st-rev)}.st.inv{color:var(--st-inv)}.st.q{color:var(--st-q)}
+.st.inv::before,.st.prog::before{animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.3}}
+@media (max-width:560px){.brow{grid-template-columns:44px minmax(0,1fr) auto}.brow .ag{display:none}.brow.head span:nth-child(3){display:none}}
+.detail{padding:22px;border-left:1px solid var(--line);background:var(--paper);min-width:0;display:grid;gap:16px;align-content:start}
+@media (max-width:900px){.detail{border-left:0;border-top:1px solid var(--line)}}
+.detail .k{font:400 .66rem/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.detail h4{font:400 1.3rem/1.15 var(--f-head);letter-spacing:-.025em;text-transform:none;color:var(--ink)}
+.detail p,.detail li{font:400 .95rem/1.5 var(--f-serif);color:var(--ink)}
+.detail ol{margin:0;padding-left:1.2em;display:grid;gap:4px}
+.detail .press{display:inline-block;justify-self:start;font:400 .72rem/1.3 var(--f-mono);color:var(--accent);background:var(--accent-soft);padding:7px 10px;border-radius:999px}
+.board-note{font:400 .7rem/1.5 var(--f-mono);color:var(--muted);padding:11px 18px;grid-column:1/-1;border-top:1px solid var(--line)}
+
+/* stat strip */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);margin-top:48px}
+@media (max-width:820px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{padding:18px 18px 4px 0;display:grid;gap:8px;align-content:start}
+.stat .who{font:400 .7rem/1 var(--f-mono);letter-spacing:.04em;color:var(--muted)}
+.stat .big{font:400 2.5rem/1 var(--f-head);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.stat p{font:400 .9rem/1.45 var(--f-serif);color:var(--muted)}
+
+/* grids */
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+@media (max-width:860px){.cols3,.cols2{grid-template-columns:1fr}}
+.col{display:grid;gap:10px;align-content:start;min-width:0}
+.col p{color:var(--muted);font-family:var(--f-serif);font-size:1rem}
+.col h3{border-top:1px solid var(--ink);padding-top:14px}
+.col .lead-in{font-family:var(--f-head);font-weight:500;color:var(--ink);letter-spacing:-.01em}
+
+.glance{margin-top:56px;font-size:1.3rem;font-weight:500;letter-spacing:-.02em}
+.products{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+@media (max-width:860px){.products{grid-template-columns:1fr}}
+.prod{padding:22px;display:grid;gap:8px;align-content:start;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.prod .pk{font:400 .68rem/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.prod b{font:500 1.25rem/1.1 var(--f-head);letter-spacing:-.025em}
+.prod p{font:400 .93rem/1.5 var(--f-serif);color:var(--muted)}
+.prod .opens{font:400 .74rem/1.4 var(--f-mono);color:var(--accent);border-top:1px solid var(--line);padding-top:10px;margin-top:4px}
+.callout{margin-top:28px;display:flex;gap:16px;align-items:baseline;border:1px solid var(--accent);border-radius:10px;padding:16px 18px;background:var(--accent-soft)}
+.callout b{font:500 .74rem/1 var(--f-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);white-space:nowrap}
+.callout p{font:400 1rem/1.5 var(--f-serif)}
+
+/* pressures */
+.press-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.press-grid{grid-template-columns:1fr}}
+.pc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:grid;gap:14px;align-content:start}
+.pc .n{font:400 .7rem/1 var(--f-mono);color:var(--accent);letter-spacing:.06em}
+.pc h3{font-size:1.5rem;font-weight:400;letter-spacing:-.03em}
+.pc>p{color:var(--muted);font:400 .97rem/1.55 var(--f-serif)}
+.pc .figs{display:grid;gap:10px;border-top:1px solid var(--line);padding-top:14px}
+.pc .fig{display:flex;gap:14px;align-items:baseline}
+.pc .fig strong{font:400 1.6rem/1 var(--f-head);letter-spacing:-.03em;min-width:4.6ch;font-variant-numeric:tabular-nums}
+.pc .fig span{font:400 .88rem/1.4 var(--f-serif);color:var(--muted)}
+.pc .answer{font:400 .9rem/1.5 var(--f-serif);color:var(--ink);background:var(--paper);border-radius:8px;padding:12px 14px}
+.pc .answer b{font-family:var(--f-head);font-weight:500}
+.quote{margin-top:36px;font:400 clamp(1.4rem,2.6vw,2rem)/1.2 var(--f-head);letter-spacing:-.03em;max-width:36ch;border-left:2px solid var(--accent);padding-left:20px}
+
+/* stepper */
+.steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin-bottom:16px}
+@media (max-width:860px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.stepbtn{text-align:left;padding:11px 12px;border:1px solid var(--line);background:var(--surface);border-radius:10px;cursor:pointer;color:var(--ink);font:inherit;display:grid;gap:4px}
+.stepbtn i{font:400 .66rem/1 var(--f-mono);font-style:normal;color:var(--muted);letter-spacing:.04em}
+.stepbtn b{font:500 1rem/1.15 var(--f-head);letter-spacing:-.02em}
+.stepbtn.on{border-color:var(--accent);background:var(--accent-soft)}
+.stepbtn.on i{color:var(--accent)}
+.stepbtn.done b{color:var(--muted)}
+.steppanel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;display:grid;gap:24px}
+.steppanel blockquote{margin:0;font:400 clamp(1.25rem,2.3vw,1.65rem)/1.3 var(--f-serif);font-style:italic;max-width:46ch}
+.steppanel .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+@media (max-width:700px){.steppanel .pair{grid-template-columns:1fr}}
+.steppanel .pair>div{display:grid;gap:10px;align-content:start}
+.kv{display:grid;gap:10px}
+.kv div{display:grid;gap:2px;padding-left:14px;border-left:1px solid var(--line-strong)}
+.kv b{font-weight:500;letter-spacing:-.01em}
+.kv span{color:var(--muted);font:400 .93rem/1.45 var(--f-serif)}
+.stepnav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:16px}
+.stepnav span{font:400 .76rem/1 var(--f-mono);color:var(--muted)}
+.trio{margin-top:32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media (max-width:860px){.trio{grid-template-columns:1fr}}
+.trio div{display:grid;gap:8px;border-top:1px solid var(--ink);padding-top:12px}
+.trio p{color:var(--muted);font:400 .97rem/1.55 var(--f-serif)}
+
+/* cases */
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.cases{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cases{grid-template-columns:1fr}}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:grid;gap:8px;align-content:start;min-width:0}
+.case .ind{font:400 .68rem/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.case b{font:500 1.15rem/1.15 var(--f-head);letter-spacing:-.02em}
+.case .big{font:400 1.9rem/1.05 var(--f-head);letter-spacing:-.035em;color:var(--accent);margin-top:4px}
+.case p{font:400 .94rem/1.5 var(--f-serif);color:var(--muted)}
+.case .maps{color:var(--ink);border-top:1px solid var(--line);padding-top:10px;margin-top:4px}
+.case .maps i{display:block;font:500 .64rem/1 var(--f-mono);font-style:normal;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:5px}
+
+/* measure */
+.measure{margin-top:40px;border:1px solid var(--line-strong);border-radius:14px;background:var(--surface);padding:26px;display:grid;gap:22px}
+.measure .mhead{display:grid;gap:8px}
+.measure .mhead h3{font-size:clamp(1.35rem,2.4vw,1.75rem);font-weight:400;letter-spacing:-.03em}
+.measure .mhead p{color:var(--muted);font:400 1rem/1.55 var(--f-serif);max-width:68ch}
+.mgrid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr) minmax(0,1fr);gap:14px}
+@media (max-width:900px){.mgrid{grid-template-columns:1fr}}
+.mcol{border-radius:10px;padding:16px;display:grid;gap:10px;align-content:start;background:var(--paper);border:1px solid var(--line);min-width:0}
+.mcol ul{margin:0;padding-left:1.1em;display:grid;gap:7px;font:400 .95rem/1.5 var(--f-serif)}
+.mcol p{font:400 .95rem/1.5 var(--f-serif)}
+.mcol b{font-family:var(--f-head);font-weight:500}
+.mcol.bad h4{color:var(--crit)}
+.mcol.bad li{color:var(--muted);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--crit) 55%,transparent)}
+.mcol.good{background:var(--accent-soft);border-color:var(--accent)}
+.mcol.good h4{color:var(--accent)}
+
+/* heard */
+.heardgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.heardgrid{grid-template-columns:1fr}}
+.heard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;gap:14px;align-content:start;min-width:0}
+.hwho{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}
+.hwho b{font:500 1.35rem/1 var(--f-head);letter-spacing:-.03em}
+.hwho span{font:400 .7rem/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.heard ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.heard li{display:grid;gap:6px}
+.heard li p{font:400 .97rem/1.5 var(--f-serif)}
+.heard li a{font:400 .74rem/1.3 var(--f-mono);text-decoration:none;justify-self:start;padding:6px 10px;border-radius:999px;background:var(--accent-soft)}
+.phases.two{grid-template-columns:repeat(2,minmax(0,1fr));margin:28px 0 0}
+@media (max-width:900px){.phases.two{grid-template-columns:1fr}}
+.intro2{margin-bottom:40px}
+.subhead[id]{scroll-margin-top:72px}
+
+.herofacts{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.herofacts li{font:500 .76rem/1 var(--f-mono);letter-spacing:.04em;padding:9px 13px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink)}
+.moathead{margin-top:48px}
+
+/* territory */
+.segs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.segbtn{display:flex;gap:10px;align-items:center;padding:10px 15px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);cursor:pointer;color:var(--ink);font:400 .92rem/1 var(--f-head)}
+.segbtn code{font:400 .7rem/1 var(--f-mono);color:var(--muted)}
+.segbtn.on{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.segbtn.on code{color:var(--inv-muted)}
+.segpanel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;display:grid;gap:24px}
+.segpanel .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media (max-width:860px){.segpanel .row{grid-template-columns:1fr}}
+.segpanel .row>div{display:grid;gap:8px;align-content:start;min-width:0}
+.segpanel p{color:var(--ink);font:400 .97rem/1.55 var(--f-serif)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:400 .82rem/1 var(--f-head);padding:8px 12px;border-radius:999px;background:var(--paper);border:1px solid var(--line)}
+.landexp{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 16px;align-items:baseline;border-top:1px solid var(--line);padding-top:18px}
+.landexp b{font:400 .7rem/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.landexp span{font:400 1rem/1.5 var(--f-serif)}
+.fine{font:400 .8rem/1.5 var(--f-mono);color:var(--muted)}
+
+/* plays */
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:thin}
+.tab{padding:12px 14px;border:0;background:transparent;font:400 .95rem/1 var(--f-head);color:var(--muted);cursor:pointer;white-space:nowrap;border-bottom:1px solid transparent;margin-bottom:-1px;letter-spacing:-.01em}
+.tab.on{color:var(--ink);border-bottom-color:var(--accent);border-bottom-width:2px}
+.playpanel{padding-top:28px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:32px}
+@media (max-width:900px){.playpanel{grid-template-columns:1fr}}
+.playpanel .thesis{font:400 1.5rem/1.2 var(--f-head);letter-spacing:-.03em;margin-bottom:4px}
+.meta{display:grid;gap:16px;align-content:start}
+.meta>div{display:grid;gap:6px}
+.meta p,.meta li{font:400 .96rem/1.5 var(--f-serif)}
+.meta ul{margin:0;padding-left:1.1em;display:grid;gap:5px}
+.meta code,.email code{font:400 .8em var(--f-mono);background:var(--accent-soft);color:var(--accent);padding:1px 5px;border-radius:4px}
+.emails{display:grid;gap:12px;align-content:start}
+.email{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.email header{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--paper);font:400 .74rem/1.3 var(--f-mono);color:var(--muted)}
+.email header span:first-child{color:var(--ink)}
+.email .body{padding:16px;display:grid;gap:10px;font:400 .97rem/1.55 var(--f-serif)}
+.proofline{display:flex;gap:18px;flex-wrap:wrap;font:400 .9rem/1.5 var(--f-serif);padding-top:12px;border-top:1px solid var(--line)}
+.proofline b{font:500 .7rem/1 var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-right:6px}
+
+/* battlecards */
+.bc{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr);gap:16px}
+@media (max-width:860px){.bc{grid-template-columns:1fr}}
+.bclist{display:grid;gap:0;align-content:start;border-top:1px solid var(--line)}
+.bcbtn{text-align:left;padding:15px 12px;border:0;border-bottom:1px solid var(--line);background:transparent;cursor:pointer;color:var(--ink);font:inherit;display:grid;gap:3px;border-radius:0}
+.bcbtn b{font:500 1.08rem/1.15 var(--f-head);letter-spacing:-.02em}
+.bcbtn span{font:400 .74rem/1.3 var(--f-mono);color:var(--muted)}
+.bcbtn:hover{background:var(--surface)}
+.bcbtn.on{background:var(--surface);box-shadow:inset 2px 0 0 var(--accent)}
+.bcpanel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:20px;align-content:start}
+.bcpanel .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:600px){.bcpanel .grid{grid-template-columns:1fr}}
+.bcpanel h4{margin-bottom:8px}
+.bcpanel p{font:400 1rem/1.55 var(--f-serif)}
+.ask{border-top:1px solid var(--line);padding-top:16px}
+.ask p{font:400 1.3rem/1.3 var(--f-head);letter-spacing:-.025em}
+.pill{font:400 .7rem/1 var(--f-mono);padding:6px 10px;border-radius:999px;border:1px solid var(--line-strong);color:var(--muted)}
+
+/* stalls + meddpicc */
+.stalls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);margin-bottom:56px}
+@media (max-width:860px){.stalls{grid-template-columns:1fr}}
+.stall{background:var(--surface);padding:22px;display:grid;gap:10px;align-content:start;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stall h4{font:500 1.08rem/1.25 var(--f-head);text-transform:none;letter-spacing:-.02em;color:var(--ink)}
+.stall p{font:400 .95rem/1.5 var(--f-serif);color:var(--muted)}
+.medhead{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.medhead>div{display:grid;gap:6px}
+.med{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:980px){.med{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.med{grid-template-columns:1fr}}
+.card{position:relative;text-align:left;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:18px;cursor:pointer;color:var(--ink);font:inherit;display:grid;gap:8px;align-content:start;min-height:220px;transition:transform .25s ease,background .25s}
+.card .L{font:300 2.8rem/1 var(--f-head);color:var(--accent);letter-spacing:-.04em}
+.card .nm{font:500 1.1rem/1.1 var(--f-head);letter-spacing:-.02em}
+.card .sub{font:400 .9rem/1.4 var(--f-serif);color:var(--muted)}
+.card .red{font:400 .86rem/1.4 var(--f-serif);border-top:1px solid var(--line);padding-top:10px}
+.card .red b{font:500 .66rem/1 var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--crit);margin-right:4px}
+.card .flipcue{font:400 .66rem/1 var(--f-mono);color:var(--muted);margin-top:auto}
+.card.flipped{background:var(--inv-bg);color:var(--inv-fg);border-color:var(--inv-bg)}
+.card.flipped .L{color:var(--inv-accent)}
+.card .back{display:grid;gap:9px}
+.card .back div{display:grid;gap:3px}
+.card .back i{font:400 .62rem/1 var(--f-mono);font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--inv-muted)}
+.card .back span{font:400 .86rem/1.4 var(--f-serif);color:var(--inv-fg)}
+.card.pop{transform:scale(.98)}
+.commit{margin-top:22px;border:1px solid var(--line);border-left:2px solid var(--ok);border-radius:10px;background:var(--surface);padding:16px 18px;font:400 1rem/1.55 var(--f-serif)}
+.commit b{font:500 .72rem/1 var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ok);margin-right:10px}
+
+/* operating system */
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+@media (max-width:860px){.stages{grid-template-columns:1fr}}
+.stage{padding:22px;display:grid;gap:10px;align-content:start;border-right:1px solid var(--line)}
+.stage:last-child{border-right:0}
+@media (max-width:860px){.stage{border-right:0;border-bottom:1px solid var(--line)}.stage:last-child{border-bottom:0}}
+.stage .code{font:400 .8rem/1 var(--f-mono);color:var(--accent)}
+.stage li{font:400 .95rem/1.5 var(--f-serif);color:var(--muted)}
+.stage ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface);margin-top:28px}
+table{border-collapse:collapse;width:100%;min-width:620px;font:400 .97rem/1.5 var(--f-serif)}
+th,td{text-align:left;vertical-align:top;padding:13px 18px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font:400 .68rem/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--paper)}
+td:first-child{font:500 .95rem/1.4 var(--f-head);letter-spacing:-.01em;white-space:nowrap}
+td.wrap1{white-space:normal}
+
+/* cloud agents */
+.thirty{background:var(--inv-bg);color:var(--inv-fg);border-radius:14px;padding:26px 28px;display:grid;gap:12px}
+.thirty b{font:400 .72rem/1 var(--f-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--inv-accent)}
+.thirty p{font:400 clamp(1.05rem,1.8vw,1.28rem)/1.55 var(--f-serif);max-width:72ch}
+.subhead{display:grid;gap:10px;margin:68px 0 24px}
+.subhead h3{font-size:clamp(1.35rem,2.4vw,1.75rem);font-weight:400;letter-spacing:-.03em;max-width:40ch}
+.subhead p{color:var(--muted);font:400 1rem/1.55 var(--f-serif);max-width:66ch}
+.ladder{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:stretch}
+@media (max-width:900px){.ladder{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.ladder{grid-template-columns:1fr}}
+.rung{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:10px;align-content:start;min-width:0}
+.rung .rn{font:400 .68rem/1 var(--f-mono);letter-spacing:.06em;color:var(--muted)}
+.rung b{font:500 1.15rem/1.15 var(--f-head);letter-spacing:-.02em}
+.rung p{font:400 .94rem/1.5 var(--f-serif);color:var(--muted)}
+.rung .hum{font:400 .9rem/1.45 var(--f-serif);color:var(--ink);border-top:1px solid var(--line);padding-top:10px;margin-top:auto}
+.rung .hum i{font:500 .64rem/1 var(--f-mono);font-style:normal;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);display:block;margin-bottom:5px}
+.rung .dv{justify-self:start;font:400 .7rem/1.3 var(--f-mono);padding:6px 9px;border-radius:999px;border:1px solid var(--line-strong);color:var(--muted)}
+.rung.cloud{border-color:var(--accent);background:var(--accent-soft)}
+.rung.cloud .rn,.rung.cloud .dv{color:var(--accent)}
+.rung.cloud .dv{border-color:var(--accent)}
+.rung.cloud .hum{border-top-color:color-mix(in srgb,var(--accent) 30%,transparent)}
+.prin{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.65fr);gap:16px}
+@media (max-width:860px){.prin{grid-template-columns:1fr}}
+.prinpanel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:20px;align-content:start}
+.prinpanel .vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:600px){.prinpanel .vs{grid-template-columns:1fr}}
+.prinpanel .vs>div{border-radius:10px;padding:16px;display:grid;gap:8px;align-content:start;min-width:0}
+.prinpanel .loc{background:var(--paper);border:1px solid var(--line)}
+.prinpanel .cld{background:var(--accent-soft);border:1px solid var(--accent)}
+.prinpanel .cld h4{color:var(--accent)}
+.prinpanel .vs p{font:400 1rem/1.5 var(--f-serif)}
+.prinpanel .care{border-top:1px solid var(--line);padding-top:16px;display:grid;gap:8px}
+.prinpanel .care p{font:400 1.2rem/1.35 var(--f-head);letter-spacing:-.02em}
+.moatlead{margin:48px 0 18px;color:var(--muted);font:400 1rem/1.55 var(--f-serif);max-width:66ch}
+.synth{margin-top:16px;font:400 1rem/1.55 var(--f-serif);color:var(--muted);max-width:80ch}
+.synth b{font-family:var(--f-head);font-weight:500;color:var(--ink)}
+.moat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+@media (max-width:860px){.moat{grid-template-columns:1fr}}
+.layer{background:var(--surface);padding:22px;display:grid;gap:10px;align-content:start;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
+.layer .ln{font:400 .68rem/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.layer h4{font:500 1.1rem/1.2 var(--f-head);text-transform:none;letter-spacing:-.02em;color:var(--ink)}
+.layer p{font:400 .94rem/1.5 var(--f-serif);color:var(--muted)}
+.layer .built{color:var(--ink);border-top:1px solid var(--line);padding-top:10px}
+.layer .built b{font:500 .64rem/1 var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);display:block;margin-bottom:5px}
+.proofs{margin-top:16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.proofs{grid-template-columns:1fr}}
+.proofs>div{border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:grid;gap:8px;align-content:start;background:var(--paper)}
+.proofs b{font:500 .7rem/1 var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.proofs p{font:400 .98rem/1.55 var(--f-serif)}
+.chain{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:ch}
+.chain li{counter-increment:ch;display:grid;grid-template-columns:2.4em minmax(0,1fr);gap:12px;padding:14px 0;border-top:1px solid var(--line);font:400 1rem/1.5 var(--f-serif)}
+.chain li:last-child{border-bottom:1px solid var(--line)}
+.chain li::before{content:counter(ch,decimal-leading-zero);font:400 .78rem/1.9 var(--f-mono);color:var(--accent)}
+.chain li b{font-family:var(--f-head);font-weight:500}
+.mission{display:grid;gap:8px;margin-bottom:28px;max-width:70ch}
+.mission p{font:400 clamp(1.2rem,2.2vw,1.55rem)/1.3 var(--f-head);letter-spacing:-.025em}
+.mission small{font:400 .9rem/1.5 var(--f-serif);color:var(--muted)}
+
+/* about */
+.aboutstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-bottom:36px}
+@media (max-width:820px){.aboutstats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.aboutstats div{display:grid;gap:6px;border-top:1px solid var(--ink);padding-top:14px}
+.aboutstats strong{font:400 2.5rem/1 var(--f-head);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.aboutstats span{font:400 .9rem/1.45 var(--f-serif);color:var(--muted)}
+.why{margin-top:40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+@media (max-width:860px){.why{grid-template-columns:1fr}}
+.why div{display:grid;gap:12px;align-content:start}
+.why p{color:var(--muted);font:400 1.02rem/1.6 var(--f-serif)}
+
+/* 90 days */
+.phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.phases{grid-template-columns:1fr}}
+.phase{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:grid;gap:14px;align-content:start}
+.phase .days{font:400 .74rem/1 var(--f-mono);color:var(--accent)}
+.phase h3{font-size:1.45rem;font-weight:400;letter-spacing:-.03em}
+.phase ul{margin:0;padding-left:1.1em;display:grid;gap:7px;font:400 .95rem/1.5 var(--f-serif)}
+.phase .out{background:var(--paper);border-radius:10px;padding:13px 14px;font:400 .92rem/1.5 var(--f-serif);margin-top:auto}
+.phase .out b{display:block;font:400 .64rem/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.scoreboard{margin-top:16px;background:var(--inv-bg);color:var(--inv-fg);border-radius:14px;padding:22px 24px;display:grid;gap:14px}
+.scoreboard b{font:400 .74rem/1 var(--f-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--inv-accent)}
+.scoreboard ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 24px;font:400 .98rem/1.4 var(--f-head);letter-spacing:-.01em}
+@media (max-width:820px){.scoreboard ul{grid-template-columns:1fr}}
+.scoreboard li::before{content:"\2192  ";color:var(--inv-accent)}
+
+/* next step */
+.next{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:36px;align-items:start}
+@media (max-width:860px){.next{grid-template-columns:1fr}}
+.next h2{font-size:clamp(2.1rem,4.6vw,3.3rem);letter-spacing:-.04em}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;gap:12px}
+.contact .line{padding-bottom:12px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.contact .line span{font:400 .95rem/1.3 var(--f-mono);user-select:all;overflow-wrap:anywhere}
+.copy{font:500 .82rem/1 var(--f-head);padding:9px 14px;border-radius:999px;border:1px solid var(--line-strong);background:var(--paper);color:var(--ink);cursor:pointer}
+.sources{padding-block:52px 44px;border-bottom:0}
+.sources ol{margin:14px 0 0;padding-left:1.6em;display:grid;gap:6px;font:400 .86rem/1.45 var(--f-serif);color:var(--muted);columns:2;column-gap:44px}
+.sources ol li{break-inside:avoid;margin-bottom:6px}
+.sources ol li::marker{font-family:var(--f-mono);font-size:.78em}
+@media (max-width:820px){.sources ol{columns:1}}
+.sources li:target{color:var(--ink);background:var(--accent-soft)}
+.disclaimer{margin-top:0;font:400 .76rem/1.6 var(--f-mono);color:var(--muted);max-width:96ch;border-top:1px solid var(--line);padding-top:18px}
+
+/* Glean overrides */
+h1,h2{font-weight:500}
+.hero h1{font-weight:600;letter-spacing:-.045em}
+.logo{aspect-ratio:332/134;color:var(--logo)}
+.logo-nav{height:18px}
+.logo-hero{height:30px}
+mark.hl{background:var(--lime);color:var(--on-lime);padding:0 .18em;border-radius:4px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.brandband{margin-top:36px;min-height:clamp(110px,15vw,160px);max-width:100%;border-radius:14px;background:var(--inv-bg) url("data:image/jpeg;base64,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+H8EUsyo7xo8/wDwns5gieTask4t5zArNKIZSmxvwi2qe3qO+effgn6/lRtXrjnOc85zjGc9enHXpxXDU+jn4bVX79DPWtG4vObp2admo4Km7b/a0u7K+qh5LgHf3K2v/URXvv8A47fgOooor93PVCiiigAooooAKlh+830T/wBCNRVLD95von/oRqZ/C/l+aA6K1+4Pq/8A7VrrbL/ln/vf+1UrkrX7g+r/APtWutsv+Wf+9/7VSvCxPxz/AMb/AFOc6i06/wDbT/2Ra6yy/wBW/wDwP/0I1ydp1/7af+yLXWWX+rf/AIH/AOhGvlMd1/w/5HK9p/P/ANJR09p94fQ/+gx11dtjamemUz16bv8AZ5/LmuTtfvdcZDc/8BjP8ge4xWH44+INt4PtFs7IRXfiO7hD2ts+Hh06J8JHqN+m4AoSS9laMN17Jh3K2aM0ngPBYnH4ilhcLTdStVn7q1UYqLbcpys4xjFO7u72Wib0IhFzaitLt6vZXSV9LvS3VW9Unbd8f/Eu08D2i2diYLzxReWwaztGO+DS4ZE2pqmpop2shZ82NkfmvZELkparIZfja7urrUry51HULia+v7yVri6vblzJcXM78PLI5wckABEULHDEEiiCIgVUubm6v7m4vb24mu727ma4ury4bzLi4uH+/JI55zwoVVCxxKqxRARxoBFX6bkeRYTJaX7tKpipxXt8S9JVHu6aurxoxeiVrzTbnG6R30aMaKbWspfE/S+zeqvd32uFFFFe50t53+b3+/S/ojYKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAkima3feuSuQSuSQOMHCjA9zyB1zkGu10rU8AAkEYwATyDlQOOMcgAcjGCMDoOGp8MzW7hhnYDkjsB1bA9/YjuMc15Oa5VRzKg6copSs7aJJpXe6i227vTqOLaa1a1T3se9aZqboEbKDIwCWB5IUcjcBnghhjIPcmvRNJ1RlMXK4wSvfGM5HJ5H88gljt5+d9I1PIBPIwAMsAM4GF4IA5I5OQB6Eceh6VqRBjGOQpJy3U5IGecYOcAgkg5BOcEfzxxfwfb26dBvVpNLfWz5bx2V+2q0e931U5qTad021Zvyun131V+/XWx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") center/cover no-repeat;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 22px}
+.brandband span{font:500 .74rem/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--inv-fg)}
+.case .big{color:var(--accent)}
+.stats{margin-top:40px}
+.stat .big{color:var(--ink)}
+.callnote{font:400 .8rem/1.5 var(--f-mono);color:var(--muted);margin-top:12px}
+.sources h4{margin-bottom:6px}
+.sources a{color:var(--muted)}
+.sources a:hover{color:var(--accent)}
+.disclaimer{margin-top:22px}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="glean" viewBox="0 0 332 134"><path fill="currentColor" d="M161.111 85.6372C159.289 87.3686 157.175 88.8115 154.769 89.8214C152.436 90.8313 149.811 91.3363 147.041 91.3363C145.583 91.3363 144.198 91.1924 142.886 90.9039C141.574 90.6155 140.261 90.1825 139.022 89.6775C137.783 89.1006 136.616 88.4511 135.523 87.7296C134.429 86.9355 133.408 86.0702 132.534 85.1322L167.016 71.9307L181.669 66.3037C180.868 61.2537 179.045 56.4924 176.275 52.3802C170.005 43.002 159.216 36.8701 147.041 36.8701C127.722 36.8701 111.976 52.4527 111.976 71.5696C111.976 73.3736 112.121 75.105 112.413 76.8364C113.215 81.886 115.037 86.6478 117.808 90.7594C119.411 93.0677 121.234 95.2321 123.348 97.108C125.463 98.984 127.722 100.643 130.274 102.014C132.752 103.384 135.45 104.467 138.293 105.187C141.136 105.909 144.052 106.27 147.114 106.27C151.925 106.27 156.591 105.332 160.746 103.529C164.975 101.797 168.693 99.1998 171.9 96.0981C175.109 92.9238 177.66 89.2445 179.41 85.0603C180.138 83.3289 180.721 81.4529 181.159 79.5777H165.267C164.319 81.886 162.933 83.9058 161.111 85.6372ZM147.114 51.7311C152.8 51.7311 157.976 54.1841 161.622 57.9353L127.139 71.1372C127.357 60.4601 136.252 51.7311 147.114 51.7311Z"/><path fill="currentColor" d="M97.6569 77.3514L97.5838 0.904785H82.332L82.4051 76.9884C82.4051 93.0478 93.2057 104.457 108.968 105.619V90.6496C102.328 89.5597 97.6569 84.3276 97.6569 77.3514Z"/><path fill="currentColor" d="M258.966 70.3404C258.225 51.8722 242.608 37.0112 223.437 37.0112C203.823 37.0112 187.835 52.5938 187.835 71.7107C187.835 90.8276 203.823 106.411 223.437 106.411C230.987 106.411 238.019 104.102 243.792 100.134V105.761H259.113L258.966 70.4843V70.3404ZM223.437 91.55C212.261 91.55 203.156 82.6766 203.156 71.7833C203.156 60.89 212.261 52.0166 223.437 52.0166C234.614 52.0166 243.718 60.8898 243.718 71.7833C243.718 82.6769 234.614 91.55 223.437 91.55Z"/><path fill="currentColor" d="M298.92 36.6167C280.854 36.6167 266.209 51.1725 266.209 69.1281V105.942H281.759V69.1037C281.759 59.7666 289.375 52.1973 298.769 52.1973H299.07C308.465 52.1973 316.081 59.7666 316.081 69.1037V105.942H331.631V69.1281C331.631 51.1725 316.986 36.6167 298.92 36.6167Z"/><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M50.3849 39.9032L60.3505 27.2256L72.4436 36.6161L62.5509 49.201C67.6576 55.2704 70.7312 63.0876 70.7312 71.6184C70.7312 90.93 54.9802 106.585 35.5502 106.585C16.1202 106.585 0.369141 90.9299 0.369141 71.6184C0.369141 52.307 16.1202 36.6519 35.5502 36.6519C40.8505 36.6519 45.8771 37.8168 50.3849 39.9032ZM35.5502 91.5675C24.465 91.5675 15.4787 82.636 15.4787 71.6184C15.4787 60.6009 24.465 51.6693 35.5502 51.6693C46.6354 51.6693 55.6217 60.6009 55.6217 71.6184C55.6217 82.636 46.6354 91.5675 35.5502 91.5675ZM71.1406 101.532C70.2693 102.558 69.351 103.537 68.3926 104.489C67.4341 105.435 66.4354 106.341 65.3965 107.201C64.3643 108.06 63.2919 108.873 62.1792 109.639C61.0733 110.405 59.9272 111.131 58.7542 111.797C57.588 112.47 56.3882 113.083 55.1616 113.649C53.9417 114.216 52.6951 114.729 51.4216 115.181C50.1548 115.641 48.8679 116.041 47.5541 116.381C46.2605 116.734 44.9402 117.02 43.6063 117.247C42.2859 117.48 40.9454 117.653 39.5915 117.766C38.2576 117.88 36.9104 117.939 35.5498 117.939C34.1892 117.939 32.842 117.88 31.5082 117.766C30.1542 117.653 28.8137 117.48 27.4933 117.247C26.1595 117.02 24.8391 116.734 23.5455 116.381L19.5976 131.023C21.3135 131.483 23.0696 131.869 24.8458 132.176C26.5951 132.482 28.378 132.715 30.181 132.862C31.9505 133.015 33.7401 133.095 35.5498 133.095C37.3595 133.095 39.1491 133.015 40.9186 132.862C42.7216 132.715 44.4978 132.482 46.2539 132.176C48.03 131.869 49.7794 131.483 51.502 131.023C53.2447 130.57 54.9606 130.037 56.6362 129.424C58.3319 128.818 59.9875 128.139 61.6095 127.386C63.2383 126.633 64.8335 125.814 66.3818 124.928C67.9368 124.035 69.4516 123.076 70.9194 122.05C72.394 121.031 73.8217 119.951 75.1957 118.805C76.5764 117.66 77.9035 116.46 79.1703 115.201C80.4438 113.942 81.657 112.637 82.8166 111.271C83.9761 109.912 85.0753 108.493 86.1075 107.034L73.6206 98.3406C72.8431 99.4398 72.012 100.506 71.1406 101.532Z"/></symbol></svg>
+<div class="rails" aria-hidden="true"></div>
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top">Dan Sinni<span>/ for</span><svg class="logo logo-nav" viewBox="0 0 332 134" role="img" aria-label="Glean"><use href="#glean"/></svg></a>
+    <ul id="navlist">
+      <li><a href="#top">Overview</a></li>
+      <li><a href="#heard">What I heard</a></li>
+      <li><a href="#why">Why New York</a></li>
+      <li><a href="#glean">Why Glean</a></li>
+      <li><a href="#competition">Competition</a></li>
+      <li><a href="#sell">How we sell</a></li>
+      <li><a href="#deal">Deal</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#plan">90 days</a></li>
+      <li><a href="#record">Track record</a></li>
+    </ul>
+    <a class="btn" href="#next">Next step</a>
+  </div>
+</nav>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="prepared"><div class="forco"><span>Prepared for</span><svg class="logo logo-hero" viewBox="0 0 332 134" role="img" aria-label="Glean"><use href="#glean"/></svg></div><span class="tag">Regional Vice President &middot; Strategic Accounts, New York</span><span><strong>Matt Mathis</strong> &middot; Follow-up to my conversations with Matt, Jake and Pareej &middot; Dan Sinni</span></div>
+    <h1>The context layer for the firms that run on <mark class="hl">what they know</mark></h1>
+    <p class="lede">In New York's largest banks, insurers, asset managers, media companies and law firms, the edge is what the firm knows. That knowledge is scattered across hundreds of systems and locked behind strict permissions. Here is how I would protect and grow the New York book, open the majors nobody has worked yet, coach and keep the team, and make Glean the context and control layer under every model these firms use.</p>
+    <ul class="herofacts"><li>Six segments</li><li>Four plays</li><li>One commit rule</li><li>Selling by Q1</li></ul>
+    <div class="ctas"><a class="btn" href="#plan">See the 90-day plan</a><a class="btn ghost" href="#heard">What I heard</a></div>
+    <div class="brandband" role="img" aria-label="Glean brand graphic"><span>Context</span><span>Cost</span><span>Control</span></div>
+  </div>
+</section>
+
+<!-- HEARD -->
+<section id="heard">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>01</b>What I heard</span><h2>What I heard from Matt, Jake and Pareej, and what it changed</h2><p class="lede">Each conversation pushed this plan in a specific direction. Every point below now has a home on this page.</p></div>
+    <div class="heardgrid"><div class="heard"><div class="hwho"><b>Matt</b><span>Strategic segment</span></div><ul><li><p>In 30 days, get across the four New York reps and their deals in flight. By 90, fill the two open seats and personally move key deals forward.</p><a href="#plan">The first 90 days &rarr;</a></li><li><p>Be the CEO of the region: executive presence and a one- and two-year plan toward a $100M ACV region. Coach hands-on and lead the culture.</p><a href="#team">Running the region &rarr;</a></li><li><p>The real competition is Anthropic and OpenAI. Copilot is a hunting ground, and CFOs want AI spend tied to business outcomes.</p><a href="#competition">Competition &rarr;</a></li></ul></div><div class="heard"><div class="hwho"><b>Jake</b><span>RVP, New England</span></div><ul><li><p>Strategic coverage is moving deeper: three to four accounts per rep instead of about ten.</p><a href="#team">Building the bench &rarr;</a></li><li><p>Keeping great reps is hard when AI labs recruit them with large equity offers.</p><a href="#team">Retention &rarr;</a></li><li><p>He wants a true partner who drives revenue in accounts nobody has worked yet, such as J&amp;J.</p><a href="#sell">Six segments &rarr;</a></li></ul></div><div class="heard"><div class="hwho"><b>Pareej</b><span>Solutions Engineering, East</span></div><ul><li><p>SE time is the scarce resource. Confirm pain, a champion and an economic buyer before an SE engages.</p><a href="#se">Partnering with SEs &rarr;</a></li><li><p>Pilots run on production connections, and approvals, not the technology, are the long pole. A pilot is a closing tool.</p><a href="#deal">Deal stalls &rarr;</a></li><li><p>Single-threaded deals are a death sentence, and healthy tension between the RVP and SE forecasts is a feature.</p><a href="#deal">The commit rule &rarr;</a></li></ul></div></div>
+  </div>
+</section>
+
+<!-- WHY NY -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>02</b>Why New York major accounts</span><h2>Three pressures every New York executive feels</h2><p class="lede">None of them is a search problem. They are context, cost and control problems, and Glean is strongest where New York's largest enterprises are most exposed: knowledge spread across hundreds of systems, a rising AI bill, and regulators who expect an audit trail.</p></div>
+    <div class="press-grid">
+      <div class="pc"><span class="n">PRESSURE 1</span><h3>Knowledge is the product, and it is scattered</h3><p>Research, client history, policy and precedent sit across SharePoint, Salesforce, ServiceNow, Confluence, Slack and email, each with its own permissions. Senior people spend their day pointing others to files.</p>
+        <div class="figs"><div class="fig"><strong>1.5 hrs</strong><span>Search time saved per employee each week at Wealthsimple and Confluent</span></div><div class="fig"><strong>110 hrs</strong><span>Saved per employee per year, Forrester TEI composite</span></div></div>
+        <p class="answer"><b>Glean's answer:</b> the Enterprise Graph connects 275+ apps with permissions intact, so every answer starts from the whole firm.</p></div>
+      <div class="pc"><span class="n">PRESSURE 2</span><h3>AI spend is rising faster than adoption</h3><p>First-wave Copilot and GenAI pilots are reaching review. CFOs want AI spend tied to business outcomes, and leaders want fewer AI tools, not more.</p>
+        <div class="figs"><div class="fig"><strong>$30</strong><span>Per user per month for Microsoft 365 Copilot, on top of the base license</span></div><div class="fig"><strong>81%</strong><span>Lower token cost than Claude Cowork in Glean's own benchmark</span></div></div>
+        <p class="answer"><b>Glean's answer:</b> one platform that consolidates tools, auto routing across 40+ models, and grounded context that cuts the tokens each task needs.</p></div>
+      <div class="pc"><span class="n">PRESSURE 3</span><h3>Regulators and CISOs set the pace</h3><p>New York-licensed financial firms answer to NYDFS Part 500 and its AI guidance. Frontier models now find flaws at machine speed, while fixing them still happens at human speed, and every new AI tool widens what can be overshared.</p>
+        <div class="figs"><div class="fig"><strong>72 hrs</strong><span>NYDFS Part 500 window to report a cybersecurity event</span></div><div class="fig"><strong>1,000</strong><span>Contractors one bank added to a 3,000-person team to keep up with patching flaws frontier models found</span></div></div>
+        <p class="answer"><b>Glean's answer:</b> permission-aware retrieval, the sources behind every answer recorded for audit, plus Glean Protect and agent access policies.</p></div>
+    </div>
+    <div class="subhead"><h4>Why now</h4><h3>Three clocks are already running for these buyers</h3></div>
+    <div class="trio" style="margin-top:0">
+      <div><h4>Pilots reach review</h4><p>The first Copilot and GenAI pilots are up for renewal. The two questions are why adoption is not higher and why spend keeps climbing. Glean answers both.</p></div>
+      <div><h4>Agents go to production</h4><p>Glean codified the agent lifecycle in May 2026 and Gartner named it a Market Shaper for no-code agent builders. Buyers now want governed agents, not experiments.</p></div>
+      <div><h4>2027 budgets are being set</h4><p>AI budgets for next year get set between now and January. A team in market in November shapes them; a team that arrives in Q1 competes for what is left.</p></div>
+    </div>
+
+    <div class="subhead"><h4>Customer proof</h4><h3>Glean is already doing this work for firms that look like ours</h3><p>Published Glean customer results, each matched to the New York workflow it most resembles.</p></div>
+    <div class="cases"><div class="case"><span class="ind">Financial software</span><b>Leading financial software provider</b><span class="big num">&gt;$2.3M</span><p>in annual value from unifying 33 data sources, with 3,000+ hours saved every month and more than 80% of employees using Glean.</p><p class="maps"><i>Maps to</i>Bank and insurer operations on Salesforce, OneDrive and Outlook</p></div><div class="case"><span class="ind">Fintech and wealth</span><b>Wealthsimple</b><span class="big num">98%</span><p>of employees use Glean to find knowledge, worth $1.03M a year in time saved.</p><p class="maps"><i>Maps to</i>Wealth management, digital banking and client service</p></div><div class="case"><span class="ind">Media, New York</span><b>TIME</b><span class="big num">3 weeks</span><p>to go live, with 100+ years of articles indexed for editorial research and ad-sales pitch prep.</p><p class="maps"><i>Maps to</i>Publishing, advertising and broadcast in Manhattan</p></div><div class="case"><span class="ind">Data infrastructure</span><b>Confluent</b><span class="big num">15,000+ hrs</span><p>saved per month, and 5 to 10 minutes saved on every support ticket.</p><p class="maps"><i>Maps to</i>Client service desks and technical support at scale</p></div><div class="case"><span class="ind">Travel technology</span><b>Booking.com</b><span class="big num">M365 + all</span><p>Its CTO says Glean unifies the Microsoft ecosystem and every internal data source into one connected source of truth.</p><p class="maps"><i>Maps to</i>Microsoft-standard banks and insurers with a Copilot pilot</p></div><div class="case"><span class="ind">Forrester TEI, 2024</span><b>10,000-employee composite</b><span class="big num">141% ROI</span><p>over three years, with payback in under six months. The study was commissioned by Glean.</p><p class="maps"><i>Maps to</i>The CFO business case</p></div></div>
+    <p class="quote" style="margin-top:48px">Glean makes every model smarter, cheaper and safer, whichever model vendor wins. That is the sentence every New York conversation should end on.</p>
+  </div>
+</section>
+
+<!-- WHY GLEAN -->
+<section id="glean">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>03</b>Why context, and why Glean</span><h2>Models are becoming a commodity. Enterprise context is not.</h2><p class="lede">Any enterprise can buy a frontier model. No one can buy a permission-aware picture of how their own firm works. Glean builds that context once and puts it under every assistant, agent and model the firm uses.</p></div>
+
+    <div class="cols2 intro2">
+      <div class="col"><h3>The company</h3><p>Founded in 2019 by Arvind Jain, a Google Search veteran and Rubrik co-founder. Glean passed $300M in ARR in May 2026, 15 months after crossing $100M, and nearly doubled its Fortune 500 customers year over year. Its CEO counts more than 1,000 large enterprise customers. The last priced round was a $150M Series F at a $7.2B valuation.</p></div>
+      <div class="col"><h3>The difference</h3><p><b class="lead-in">Glean is the context and control layer for enterprise AI.</b> It makes every model smarter, cheaper and safer, no matter which model vendor wins.</p><p>Glean connects the firm's apps into an Enterprise Graph that respects existing permissions, then puts it to work through Search, Assistant, Agents and, soon, Tau on the desktop. It routes each task to the right model and can serve its context to the tools a firm already owns.</p></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="who">ARR, MAY 2026</span><span class="big">$300M</span><p>Tripled in 15 months</p></div>
+      <div class="stat"><span class="who">CUSTOMERS</span><span class="big">1,000+</span><p>Large enterprises, per the CEO in October 2026</p></div>
+      <div class="stat"><span class="who">ENGAGEMENT</span><span class="big">45%</span><p>Weekly to monthly active users, over twice the SaaS benchmark</p></div>
+      <div class="stat"><span class="who">BREADTH</span><span class="big">85%+</span><p>Of customers use Glean across five or more departments</p></div>
+    </div>
+
+    <div class="subhead"><h4>The ladder</h4><h3>From search to proactive agents, the employee moves from finding the work to directing it</h3></div>
+    <div class="ladder">
+      <div class="rung"><span class="rn">RUNG 1</span><b>Enterprise search</b><p>Finds the right document across every app, ranked by how the firm works.</p><span class="dv">Glean Search</span><p class="hum"><i>The employee</i>Looks it up</p></div>
+      <div class="rung"><span class="rn">RUNG 2</span><b>Assistant</b><p>Answers, drafts and analyzes with company context and cited sources.</p><span class="dv">Glean Assistant</span><p class="hum"><i>The employee</i>Asks and edits</p></div>
+      <div class="rung cloud"><span class="rn">RUNG 3</span><b>Agents</b><p>Run multi-step workflows across systems, seeing only what each user may see.</p><span class="dv">Agent Builder &middot; Agent Library</span><p class="hum"><i>The employee</i>Delegates and reviews</p></div>
+      <div class="rung cloud"><span class="rn">RUNG 4</span><b>Proactive AI</b><p>Starts from triggers, schedules and inboxes before anyone asks.</p><span class="dv">Proactive AI &middot; Independent agents</span><p class="hum"><i>The employee</i>Sets goals and guardrails</p></div>
+    </div>
+
+    <div class="subhead"><h4>First principles</h4><h3>Why an index beats federated search</h3><p>Most AI tools use federated search: they query each app live at the moment of the question. Glean indexes content, people, permissions and activity ahead of time. Select a principle.</p></div>
+    <div class="prin">
+      <div class="bclist" id="prinlist" role="tablist" aria-label="Six principles"></div>
+      <div class="prinpanel" id="prinpanel" role="tabpanel" aria-live="polite"></div>
+    </div>
+    <p class="synth"><b>The synthesis:</b> the first five make the sixth safe. Once AI sees the whole firm, finds the current answer, respects every permission and runs at the right cost, agents can act on it, and Glean becomes a firm-wide utility that people use every week.</p>
+
+    <div class="subhead"><h4>The mission</h4><h3>Context is not a feature of Glean's strategy. It is the product and the moat.</h3></div>
+    <div class="cols2">
+      <div class="col">
+        <div class="mission"><p>Every company's knowledge is scattered across hundreds of apps and in people's heads. Glean connects it, keeps it secure and puts it to work.</p><small>Glean's CEO says the goal is to be easy to replace: customers own their context and their agents' memory in a standard format.</small></div>
+        <ol class="chain">
+          <li><span>Connected, permission-aware context makes answers trustworthy, so people use AI every week. That is <b>adoption</b>.</span></li>
+          <li><span>Trusted context lets agents act under governance, and every agent is scored on adoption and hours saved. That is <b>measured work</b>.</span></li>
+        </ol>
+      </div>
+      <div class="col">
+        <h4>Why Glean is built for this, not retrofitted</h4>
+        <div class="kv">
+          <div><b>Context first since 2019</b><span>Search came before chat, so the connectors, ranking signals and permission sync were built before anyone called it AI.</span></div>
+          <div><b>Permissions in the index</b><span>Source-system permissions are enforced on every result and updated as access changes.</span></div>
+          <div><b>Model-agnostic by design</b><span>40+ models in the hub, with auto routing that matches each task to an efficient, balanced or frontier model.</span></div>
+          <div><b>One control plane</b><span>AI Gateway, Glean Protect, agent access policies and usage controls across every AI entry point.</span></div>
+          <div><b>A lifecycle for agents</b><span>Seven stages from opportunity to monitoring, with an insights dashboard for adoption and estimated hours saved.</span></div>
+          <div><b>Composable</b><span>Use it through Glean's own interface, REST APIs or MCP, including as headless context under Copilot or a lab assistant.</span></div>
+          <div><b>Proof at scale</b><span>3+ billion searches run and 99.9%+ uptime for core search and AI services.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="subhead moathead"><h4>The moat</h4><h3>Easy to demo, hard to run at enterprise scale</h3></div>
+    <div class="proofs">
+      <div><b>Build versus buy</b><p>Many banks start by building retrieval on Azure OpenAI or Bedrock. The model is the easy part. Connectors, permissions that stay in sync and relevance ranking take years, and that is where homegrown projects stall. Glean maintains 275+ connectors and 60+ ranking signals so the firm's engineers can build firm-specific agents on top.</p></div>
+      <div><b>Phase two is the org</b><p>Connecting data is phase one. Phase two is changing how work gets done: where agents help, how to govern them, how to measure them. Glean Transform maps how work happens and measures impact, and Forrester's composite showed a 141% three-year ROI.</p></div>
+    </div>
+
+    <div class="subhead"><h4>Why it takes a context layer</h4><h3>New York's largest firms need one layer of context and control under every AI tool</h3><p>Each property of the platform answers one of the three pressures in section 02.</p></div>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Platform property</th><th>The New York pressure it answers</th></tr></thead>
+      <tbody>
+        <tr><td>Permission-aware graph</td><td>Deal files, research and client matters stay behind information barriers, even when an agent does the searching.</td></tr>
+        <tr><td>Connectors beyond one suite</td><td>Most banks standardize on Microsoft, yet the work lives in Salesforce, ServiceNow, Confluence, Jira and market data. Glean reaches all of it.</td></tr>
+        <tr><td>Auto routing and AI Gateway</td><td>The CFO gets cost per task and team budgets, and the CTO stops paying frontier prices for routine work.</td></tr>
+        <tr><td>Sources logged per answer</td><td>Audit, compliance and NYDFS reviews can see which sources informed each response.</td></tr>
+        <tr><td>Agent governance</td><td>Model risk and the CISO approve one platform with access policies and a sandbox, not fifty tools.</td></tr>
+        <tr><td>Works with Copilot and the labs</td><td>No rip and replace. Glean can run headless as the context layer under Copilot, so a side-by-side test (Copilot alone vs. Copilot with Glean) proves the value in the customer's own environment.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- COMPETITION -->
+<section id="competition">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>04</b>Competition</span><h2>How the market splits, and how deals are won</h2><p class="lede">Anthropic and OpenAI compete for the same AI budget and are the main rivals. Copilot is more often a displacement opportunity, and cloud providers counter with free credits. Select an alternative to open its battlecard.</p></div>
+    <div class="tablewrap mkt" style="margin:0 0 28px"><table>
+      <thead><tr><th>Category</th><th>Examples</th><th>What it sells</th><th>Where Glean fits</th></tr></thead>
+      <tbody>
+        <tr><td>Lab workspaces</td><td class="wrap1">ChatGPT Enterprise, Claude Enterprise</td><td class="wrap1">A frontier model with connectors and agents</td><td class="wrap1">The main competitor. Glean is model-agnostic and can sit underneath them as the context layer</td></tr>
+        <tr><td>Suite assistants</td><td class="wrap1">Microsoft 365 Copilot, Gemini Enterprise</td><td class="wrap1">AI inside one vendor's apps, priced per seat</td><td class="wrap1">Often a disappointing pilot. Run side by side, then expand across the estate</td></tr>
+        <tr><td>Cloud providers</td><td class="wrap1">Google Cloud, AWS</td><td class="wrap1">Free tokens and compute to win the AI decision</td><td class="wrap1">Credits buy a model, not context. Price the outcome</td></tr>
+        <tr><td>Workflow platforms</td><td class="wrap1">Salesforce Agentforce, ServiceNow, Atlassian Rovo</td><td class="wrap1">AI inside one system of record</td><td class="wrap1">They become Glean sources and action targets</td></tr>
+        <tr><td>In-house builds</td><td class="wrap1">Retrieval on Azure OpenAI or Bedrock</td><td class="wrap1">Custom search and chat for one firm</td><td class="wrap1">Few can staff connectors, permission sync and ranking indefinitely</td></tr>
+      </tbody>
+    </table></div>
+    <div class="bc"><div class="bclist" id="bclist"></div><div class="bcpanel" id="bcpanel" aria-live="polite"></div></div>
+    <div class="subhead"><h4>Against the labs</h4><h3>How an independent wins when the model labs sell into the same account</h3><p>The labs will win on model quality. They will not out-focus a company whose whole product is enterprise context.</p></div>
+    <div class="trio" style="margin-top:0">
+      <div><h4>Differentiate for the enterprise</h4><p>Labs sell models and seats. We sell a measured outcome, with enablement and change management that make adoption stick across a 50,000-person firm.</p></div>
+      <div><h4>Take on the deployment pain</h4><p>Production connectors, permission sync and system-by-system approvals at the largest banks are hard work the labs avoid. That work is the moat.</p></div>
+      <div><h4>Sell model independence</h4><p>Large enterprises value supplier continuity. With Glean they can change models every quarter without rebuilding their context or their agents.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SELL -->
+<section id="sell">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>05</b>How the team sells</span><h2>One territory map, one conversation, four plays</h2><p class="lede">Every AE hunts the same way, so we can see what converts, coach to it and move fast. Each play names its buyer and opens with that buyer's question.</p></div>
+    <div class="subhead" style="margin-top:0"><h4>Where we hunt</h4><h3>Six segments, each with its own buyer and reason to act</h3><p>FSI leads because New York has more of it than anywhere, with healthcare and life sciences close behind across New York and New Jersey. The territory is the whole majors list, worked three to four named accounts per strategic AE. Select a segment.</p></div>
+
+    <div class="segs" id="segs" role="tablist" aria-label="Segments"></div>
+    <div class="segpanel" id="segpanel" aria-live="polite"></div>
+    <p class="fine" style="margin-top:12px">Accounts are illustrative and drawn from public information. Some may already be Glean customers. I would confirm named accounts, current customers and partner overlap with the team before any outreach.</p>
+
+    <div class="subhead" id="talk"><h4>The first conversation</h4><h3>A six-step Challenger meeting with a CIO or Chief AI Officer at a New York bank or insurer</h3><p>Step through what my team and I would bring to a first executive meeting.</p></div>
+
+    <div class="steps" id="steps" role="tablist" aria-label="Talk track steps"></div>
+    <div class="steppanel" id="steppanel" aria-live="polite"></div>
+
+    <div class="subhead" id="plays"><h4>Four plays</h4><h3>Four plays for the first quarter</h3><p>Each play starts from data the AE pulls on the account, leads with one specific question and runs as a three-touch sequence across email, LinkedIn and phone. Every AE runs the same plays so we can see what converts and pivot as needed.</p></div>
+
+    <div class="tabs" id="playtabs" role="tablist" aria-label="Plays"></div>
+    <div id="playpanel"></div>
+  </div>
+</section>
+
+<!-- DEAL -->
+<section id="deal">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>06</b>Deal and measurement</span><h2>Where these deals stall, how we qualify them, and how we prove value</h2><p class="lede">Six stalls we plan for from the first meeting, the MEDDPICC checklist every opportunity runs against, and the scorecard every pilot is judged on.</p></div>
+    <div class="stalls">
+      <div class="stall"><h4>"We already bought Copilot"</h4><p>We coexist first and offer a side-by-side: Copilot alone vs. Copilot with Glean context on the same questions. A disappointing Copilot pilot is good hunting ground.</p></div>
+      <div class="stall"><h4>"Model risk and TPRM will take a year"</h4><p>Expect the Microsoft read and write permissions question from security. The security, TPRM and model risk package goes out at M2, mapped to NYDFS Part 500, with the SE in the room. The CISO joins at M2, not at signature.</p></div>
+      <div class="stall"><h4>"We'll build it on Azure or Bedrock"</h4><p>We price the build honestly over three years: connectors, permission sync, ranking, evaluation and run cost. Then we offer Glean's APIs so their engineers build firm-specific agents on top.</p></div>
+      <div class="stall"><h4>The pilot becomes a science project</h4><p>A pilot is a closing tool, not a way to keep talking. No SE time until pain, a champion and an economic buyer are confirmed. Then one workflow, written success criteria and expansion terms agreed up front. Gray-area deals are time-boxed and escalated.</p></div>
+      <div class="stall"><h4>Production approvals are the long pole</h4><p>Glean pilots run on production connections, not sandboxes, and every system owner approves separately. At the largest banks, approval alone can take three months. We map each owner at M2 and start approvals before the pilot is scoped.</p></div>
+      <div class="stall"><h4>One champion, one thread</h4><p>A single champion is a death sentence. The best cycles pair a C-level sponsor with a senior IT or AI leader and two or three line-of-business stakeholders. A deal still single-threaded after six months gets paid resources or we pull back.</p></div>
+    </div>
+    <div class="medhead"><div><h3>MEDDPICC checklist</h3><p class="fine">Updated after every call and reviewed with each AE weekly. Select a letter to flip it to the proof required before a deal counts in the forecast.</p></div><button class="btn ghost" id="flipall" type="button">Flip all</button></div>
+    <div class="med" id="med"></div>
+    <div class="commit"><b>Commit rule</b>A deal enters commit only when the economic buyer has confirmed the metrics, the pilot has met written success criteria, the paper process including TPRM and production connector approvals is dated in a mutual plan, and the champion has been tested.</div>
+    <div class="measure" id="measure">
+      <div class="mhead"><h4>How we prove value</h4><h3>Measure adoption and outcomes, not queries</h3><p>Searches run, licenses deployed and tokens consumed are easy to game and prove nothing to a CFO. Every pilot is scored on outcomes the customer already cares about.</p></div>
+      <div class="mgrid">
+        <div class="mcol bad"><h4>What we do not sell on</h4><ul><li>Searches run or licenses deployed</li><li>Tokens consumed</li><li>A productivity percentage promised before discovery</li></ul></div>
+        <div class="mcol good"><h4>What we measure</h4><ul><li><b>Weekly active use</b> in the pilot group, against the 45% benchmark across Glean customers</li><li><b>Hours saved</b> on named workflows: client prep, DDQs, claims, service tickets</li><li><b>Cost per AI task</b> against the tools they already pay for</li></ul></div>
+        <div class="mcol"><h4>How it expands</h4><p>A pilot proves one workflow in one department. That result becomes the champion's case for the next department, seats go firm-wide, and governed agents follow on the same context. Expansion is proven at Glean, so a smaller first land that gets us in the door is worth taking.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>07</b>Running the team</span><h2>How I would run the region</h2><p class="lede">Matt asked for three things in this leader: hands-on coaching, a CEO of the region, and a culture leader. Underneath them sit one stage language, one cadence and one forecast rule, so every AE, SE and SDR knows where a deal stands without a meeting.</p></div>
+    <div class="stages">
+      <div class="stage"><span class="code">M1</span><h3>Discovery with pain</h3><ul><li>Named pain tied to hours, AI spend or a regulatory date</li><li>Entry workflow picked: service desk, client prep, research or claims</li><li>Champion identified and mapped</li></ul></div>
+      <div class="stage"><span class="code">M2</span><h3>Technical validation</h3><ul><li>Executive sponsor engaged and metrics confirmed</li><li>Success criteria written with the SE</li><li>Security, TPRM and model risk review started</li></ul></div>
+      <div class="stage"><span class="code">M3</span><h3>Business case and paper</h3><ul><li>Seat and usage forecast and business case agreed</li><li>Mutual action plan dated back from signature</li><li>Connector access plan signed with the customer's admins</li><li>Expansion path written into the first order</li></ul></div>
+    </div>
+    <div class="phases two">
+      <div class="phase"><span class="days">Building the bench</span><h3>Start strong, go deeper, keep the best</h3><ul>
+        <li>Start with the four New York reps, two ramped and two ramping, and protect the deals Jake has in flight</li>
+        <li>Fill the two open seats by day 90 through my New York network: grit, coachability, and never above pipeline generation</li>
+        <li>Move strategic AEs to deeper coverage: three to four named accounts each instead of about ten</li>
+        <li>Keep the best reps while AI labs recruit them: clear account ownership, career-making lands, visible wins and a real path to grow</li></ul></div>
+      <div class="phase"><span class="days">Ramping a new AE</span><h3>Selling in 30 days, not a quarter</h3><ul>
+        <li>Week 1: hands on with Glean, the six-step talk track and the Copilot and lab-assistant battlecards</li>
+        <li>Week 2: certified on the talk track in a role play with me and an SE, and ready to pivot to a demo or a customer story on demand</li>
+        <li>Week 3: the four plays live on 20 named accounts</li>
+        <li>Week 4: first executive meeting booked</li>
+        <li>Day 60: first opportunity at M2 with written success criteria</li></ul></div>
+    </div>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Motion</th><th>What happens</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Monday forecast</td><td class="wrap1">Each AE calls commit and best case against the commit rule. Every gap gets an owner and a date.</td><td class="wrap1">No surprises at quarter end</td></tr>
+        <tr><td>Weekly deal review</td><td class="wrap1">Top ten opportunities walked through MEDDPICC with the SE lead.</td><td class="wrap1">Deals move M1 to M3 faster</td></tr>
+        <tr><td>Pipeline block</td><td class="wrap1">Two hours a week per AE on the four plays, tracked as self-sourced pipeline.</td><td class="wrap1">Pipeline is built, not inherited</td></tr>
+        <tr><td>1:1 coaching</td><td class="wrap1">Call review and one skill per AE per month, driving Command of the Message fundamentals.</td><td class="wrap1">Reps get sharper every month</td></tr>
+        <tr><td>Partner sync</td><td class="wrap1">Monthly with GSIs, AWS and strategy firms on shared accounts and transformation programs.</td><td class="wrap1">Partners source and accelerate deals</td></tr>
+        <tr><td>Weekly pitch room</td><td class="wrap1">No recordings. AEs pitch each other and sharpen the talk tracks against the labs and Copilot.</td><td class="wrap1">Reps ready for any turn in a meeting</td></tr>
+        <tr><td>First-call dossier</td><td class="wrap1">Company, people and org chart prepared before every first meeting.</td><td class="wrap1">First meetings that earn a second</td></tr>
+        <tr><td>Drink our own</td><td class="wrap1">Every AE builds one Glean agent for their own account research and shares it with the team.</td><td class="wrap1">Credible AI fluency in every meeting</td></tr>
+      </tbody>
+    </table></div>
+    <div class="subhead" id="se"><h4>Partnering with Solutions Engineering</h4><h3>The AE, the SE and I go into every strategic deal together</h3><p>SE capacity is the scarcest resource in the region, so I protect it.</p></div>
+    <div class="trio" style="margin-top:0">
+      <div><h4>Qualify before SE time</h4><p>An opportunity gets an SE once pain, a champion and an economic buyer are confirmed. AEs carry the first executive conversations themselves. Target one SE for every 1.75 AEs or better.</p></div>
+      <div><h4>Forecast together</h4><p>The RVP and the SE leader each call the number. Where the calls differ, we have found a gap neither of us saw alone, and we close it.</p></div>
+      <div><h4>Disagree, then go in together</h4><p>At Honeycomb, my SE leader flagged feasibility risk on a pilot the team wanted to close that quarter. We extended it, she was right, and the deal expanded. That friction built the partnership.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 90 DAYS -->
+<section id="plan">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>08</b>The first 90 days</span><h2>Hunting from week one, with something to inspect at every gate</h2><p class="lede">Net-new pipeline from the first week, continuity on every deal in flight, and by day 90 a full bench, a reliable two-quarter forecast, and a two-year plan toward a $100M ACV region.</p></div>
+    <div class="phases">
+      <div class="phase"><span class="days">Days 1 to 30</span><h3>Hunt, assess, activate</h3><ul>
+        <li>Get across the four New York reps and every deal in flight; run joint calls with Jake so customers feel continuity</li>
+        <li>Launch the four plays with every AE in week one and book the first net-new executive meetings by week two</li>
+        <li>Re-tier the book to three or four named accounts per strategic AE and open untouched majors, such as J&amp;J; map Glean users and alumni in each</li>
+        <li>Add MEDDPICC and Command of the Message rigor to every deal and multithread anything single-threaded</li>
+        <li>Set the SE operating rhythm with Pareej: entry criteria, a joint forecast and pilot rules</li>
+        <li>Hands on with Assistant, Agent Builder, AI Gateway and Glean Protect</li></ul>
+        <div class="out"><b>Visible output</b>A close plan on every in-flight deal, the book re-tiered, first greenfield meetings booked, pipeline targets agreed by day 30</div></div>
+      <div class="phase"><span class="days">Days 31 to 60</span><h3>Land and build the playbook</h3><ul>
+        <li>Turn first executive meetings into M2 opportunities with written success criteria</li>
+        <li>Close the in-flight deals that are ready and turn each win into a reference</li>
+        <li>Ship one-page theses for banking, insurance, asset management, media and professional services</li>
+        <li>Build the proof pack: Wealthsimple, the financial software provider, TIME, Confluent, Booking.com and Forrester mapped to New York workflows</li>
+        <li>Certify every rep on the talk track and battlecards</li>
+        <li>Open recruiting for the two open seats through my network</li></ul>
+        <div class="out"><b>Visible output</b>Self-sourced pipeline growing every week, first lands, tested messaging and a hiring slate</div></div>
+      <div class="phase"><span class="days">Days 61 to 90</span><h3>Accelerate and forecast</h3><ul>
+        <li>Fill the two open seats and personally move the largest deals to their next stage</li>
+        <li>Move qualified deals from M1 to M3 with an executive sponsor on each, every one multithreaded</li>
+        <li>A reliable two-quarter forecast built on stage criteria and the commit rule, called jointly with the SE leader</li>
+        <li>A one- and two-year territory plan toward a $100M ACV region, with the headcount and SE plan to match</li>
+        <li>Expansion plans for every landed account, scored on usage, hours saved and cost per task</li>
+        <li>Joint plays with GSIs and AWS on the largest AI transformation programs</li></ul>
+        <div class="out"><b>Visible output</b>A full bench, a defensible two-quarter forecast, and a two-year plan toward a $100M ACV region</div></div>
+    </div>
+    <div class="scoreboard"><b>90-day scoreboard</b><ul>
+      <li>Net-new pipeline created every month from the four plays</li><li>Executive meetings in greenfield majors</li><li>Every active deal multithreaded</li>
+      <li>First New York lands referenceable</li><li>Two open seats filled by day 90</li><li>Two-quarter forecast on the commit rule</li></ul></div>
+  </div>
+</section>
+
+<!-- RECORD -->
+<section id="record">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><b>09</b>Track record</span><h2>I have built teams and sold platform bets to these buyers before</h2><p class="lede">Twenty years selling complex technology to enterprise CIOs, CTOs and CISOs, building vertical teams, and selling AI and modernization to regulated firms.</p></div>
+    <div class="aboutstats">
+      <div><strong>11x</strong><span>President's Club as IC &amp; manager at Pivotal/VMware, Dell Technologies, SunGard Availability</span></div>
+      <div><strong>2x</strong><span>Successfully built vertical teams in both FSI and various industries</span></div>
+      <div><strong>$50M</strong><span>Qualified pipeline from an AI-assisted modernization practice I co-built</span></div>
+      <div><strong>2x</strong><span>IPO and start up Founder, exited 2012</span></div>
+    </div>
+    <div class="why">
+      <div><h3>Why New York majors</h3><p>New York's largest enterprises buy the way banks do: heavy security review, model risk and third-party risk, and long cycles with many stakeholders. I lead the FSI strategic team at Honeycomb today and have spent two decades selling to CIOs, CTOs and CISOs at banks, insurers and healthcare companies. Asset management, life sciences, media and professional services share the same pattern: knowledge-heavy, multi-vendor and regulated.</p></div>
+      <div><h3>Why Glean</h3><p>As models commoditize, context and governance become the durable value, and Glean leads the category. At Honeycomb I unify telemetry across a fragmented engineering stack. Glean unifies knowledge across a fragmented app stack: the same buyer and the same land-and-expand motion, one layer up. And users fight to keep Glean once they have it, which is the surest sign a platform will expand. CISSP and CIPP certified at Deloitte, with co-sell relationships at AWS and Deloitte and a startup exit behind me.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT -->
+<section id="next">
+  <div class="wrap next">
+    <div class="sec-head" style="margin:0"><span class="eyebrow"><b>10</b>Next step</span><h2>Start in November. Be selling at full speed when Q1 opens.</h2><p class="lede">Most New York enterprises set their 2027 AI budgets between now and January. If I start in November, the team reaches buyers while those budgets are still open and walks into Q1 2027 with a plan, a full bench and pipeline already in motion.</p><p class="lede">I'd welcome the chance to walk Matt, his leadership and the panel through this plan. Every segment, play and number here is a starting hypothesis, already sharpened by Matt, Jake and Pareej, and the fastest way to improve it further is with the people who sell Glean every day.</p></div>
+    <div class="contact">
+      <div class="line"><span id="email">dan.sinni@gmail.com</span><button class="copy" type="button" data-copy="email">Copy email</button></div>
+      <div class="line"><span id="phone">917-805-8939</span><button class="copy" type="button" data-copy="phone">Copy number</button></div>
+      <p class="fine">Dan Sinni &middot; Philadelphia Suburbs/New York Office</p>
+    </div>
+  </div>
+</section>
+
+<footer class="sources">
+  <div class="wrap">
+    <h4>Sources</h4>
+    <ol>
+      <li><a href="https://www.glean.com/press/glean-surpasses-300m-arr-unrivaled-enterprise-context-fuels-ai-adoption" target="_blank" rel="noopener">Glean: surpasses $300M ARR (May 28, 2026)</a></li>
+      <li><a href="https://www.glean.com/press/glean-takes-on-enterprise-ais-biggest-bottlenecks-context-gaps-rising-costs-and-ai-sprawl" target="_blank" rel="noopener">Glean: Glean:GO launches and Claude Cowork benchmark (Aug 26, 2026)</a></li>
+      <li><a href="https://www.glean.com/press/glean-introduces-the-enterprise-agent-development-lifecycle-codifying-how-enterprises-build-govern-and-measure-ai-agents" target="_blank" rel="noopener">Glean: Enterprise Agent Development Lifecycle (May 12, 2026)</a></li>
+      <li><a href="https://finance.yahoo.com/technology/ai/articles/glean-recognized-market-shaper-2026-140000063.html" target="_blank" rel="noopener">Gartner Emerging Market Quadrant, Market Shaper (2026)</a></li>
+      <li><a href="https://techintelpro.com/news/finance/financial-services/glean-expands-financial-services-mcp-ecosystem-with-cb-insights-factset-and-sp-global" target="_blank" rel="noopener">Glean financial services MCP ecosystem (June 17, 2026)</a></li>
+      <li><a href="https://thenextweb.com/news/arvind-jain-glean-claude-context-tnw-podcast" target="_blank" rel="noopener">TNW: Arvind Jain interview (Oct 15, 2026)</a></li>
+      <li><a href="https://techcrunch.com/2025/06/10/enterprise-ai-startup-glean-lands-a-7-2b-valuation" target="_blank" rel="noopener">TechCrunch: $7.2B Series F (June 10, 2025)</a></li>
+      <li><a href="https://www.glean.com/" target="_blank" rel="noopener">Glean.com: platform, connectors, usage and uptime figures</a></li>
+      <li><a href="https://www.glean.com/glean-vs-copilot" target="_blank" rel="noopener">Glean vs. Microsoft Copilot comparison</a></li>
+      <li><a href="https://toolradar.com/blog/chatgpt-work-vs-copilot-vs-glean" target="_blank" rel="noopener">Toolradar: ChatGPT Work vs. Copilot vs. Glean (2026)</a></li>
+      <li><a href="https://www.glean.com/resources/wealthsimple" target="_blank" rel="noopener">Customer story: Wealthsimple</a></li>
+      <li><a href="https://www.glean.com/resources/customer-stories/leading-financial-software-provider" target="_blank" rel="noopener">Customer story: leading financial software provider</a></li>
+      <li><a href="https://www.glean.com/resources/customer-stories/time" target="_blank" rel="noopener">Customer story: TIME</a></li>
+      <li><a href="https://www.glean.com/resources/customer-stories/confluent" target="_blank" rel="noopener">Customer story: Confluent</a></li>
+      <li><a href="https://tei.forrester.com/go/Glean/workAIplatform/docs/TheTEIofGlean.pdf" target="_blank" rel="noopener">Forrester TEI of Glean, commissioned by Glean (Sept 2024)</a></li>
+      <li><a href="https://jobs.generalcatalyst.com/companies/glean/jobs/71052010-regional-vice-president-new-york-city" target="_blank" rel="noopener">Glean: Regional Vice President, New York City posting</a></li>
+      <li>Conversations with Matt Mathis (Oct 21), Jake Kokos (Oct 29) and Pareej Pradhan (Oct 30, 2026)</li>
+    </ol>
+    <p class="disclaimer">Independent research prepared by Dan Sinni for the Regional Vice President, Strategic Accounts, New York role. Not affiliated with or endorsed by Glean. Figures come from public sources, including Glean's published press releases and customer stories, as of October 2026; benchmark figures are Glean's own. Example accounts and emails are illustrative. The Glean logo is used only to identify the company this plan is prepared for.</p>
+  </div>
+</footer>
+</main>
+
+<script>
+(function(){
+
+/* ---------- Talk track ---------- */
+const STEPS=[
+ {k:"Warmer",d:"Show we know their world",say:"Every CIO I meet in New York has bought AI. Most are now asking two questions: why isn't adoption higher, and why is the bill climbing so fast?",
+  a:["What we establish",[["Adoption gap","Licenses bought, weekly use flat"],["Spend gap","Seats and tokens up, cost per task unknown"]]],
+  b:["The assumption we challenge",[["From","We need a better model or more licenses"],["To","We need our own context under every model"]]]},
+ {k:"Reframe",d:"Challenge the assumption",say:"The model is no longer the scarce asset. Your context is: what your firm knows, who is allowed to see it, and how the work actually gets done.",
+  a:["The new frame",[["Context as infrastructure","Built once, used by every assistant and agent"],["Models as a utility","Route each task to the model it needs"]]],
+  b:["Evidence",[["85% to 90% of tasks","Run well on cheaper models, per Glean's CEO"],["40+ models","In Glean's model hub and auto routing"]]]},
+ {k:"Rational drowning",d:"Make the cost concrete",say:"Let's put a number on what scattered knowledge costs, and on what the AI bill will look like if nothing changes.",
+  a:["The data",[["1.5+ hours a week","Search time saved per employee at Wealthsimple and Confluent"],["110 hours a year","Saved per employee, Forrester TEI composite"]]],
+  b:["And the AI bill",[["$2.98 vs. $0.58","Average cost per query, Claude Cowork vs. Glean, Glean benchmark"],["$30 a month","Copilot add-on per user, before agents"]]]},
+ {k:"Emotional impact",d:"Make it personal",say:"When an AI answer cites a document someone was never allowed to see, who explains it to the regulator and the board?",
+  a:["Why it matters personally",[["Regulator exposure","A permission failure becomes an NYDFS and board story"],["Talent","Senior people spend their day pointing juniors to files"]]],
+  b:["What they want instead",[["AI people trust","Used every week, not tried once"],["One platform","Something model risk and the CISO can approve"]]]},
+ {k:"A better way",d:"Describe the better model",say:"Picture every employee and every agent working from the same permission-aware context, routed to the right model, with every answer traceable to its source.",
+  a:["What better looks like",[["Connect","275+ apps in one Enterprise Graph"],["Answer","Assistant grounded in that context, with sources cited"]]],
+  b:["And keeps it safe",[["Act","Agents with access policies and a sandbox"],["Control","AI Gateway budgets and Glean Protect"]]]},
+ {k:"Our solution",d:"Show why Glean",say:"This is already working at firms with knowledge as scattered as yours. We will prove it on one workflow you already measure, scored on weekly use, hours saved and cost per task.",
+  a:["The proof",[["More than $2.3M a year","Leading financial software provider, 33 sources unified"],["98% of employees","Use Glean at Wealthsimple"]]],
+  b:["How we deliver",[["Three weeks to live","TIME, here in New York"],["Coexist with Copilot","Booking.com unifies its Microsoft ecosystem with every internal source"],["The scorecard","Weekly use, hours saved and cost per task, agreed before the pilot starts"]]]}
+];
+const stepsEl=document.getElementById("steps"), spEl=document.getElementById("steppanel");
+stepsEl.innerHTML=STEPS.map((s,i)=>`<button class="stepbtn" type="button" role="tab" data-i="${i}"><i>STEP ${i+1}</i><b>${s.k}</b></button>`).join("");
+const kv=g=>`<div><h4>${g[0]}</h4><div class="kv">${g[1].map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join("")}</div></div>`;
+function showStep(i){
+  const s=STEPS[i];
+  stepsEl.querySelectorAll(".stepbtn").forEach((b,j)=>{b.classList.toggle("on",j===i);b.classList.toggle("done",j<i);b.setAttribute("aria-selected",j===i)});
+  spEl.innerHTML=`<div class="eyebrow">Step ${i+1} &middot; ${s.d}</div><blockquote>"${s.say}"</blockquote><div class="pair">${kv(s.a)}${kv(s.b)}</div>
+   <div class="stepnav"><button class="btn ghost" type="button" id="sprev" ${i===0?"disabled":""}>Back</button><span>Step ${i+1} of ${STEPS.length}</span><button class="btn" type="button" id="snext">${i===STEPS.length-1?"Start over":"Next step"}</button></div>`;
+  document.getElementById("sprev").onclick=()=>showStep(Math.max(0,i-1));
+  document.getElementById("snext").onclick=()=>showStep(i===STEPS.length-1?0:i+1);
+}
+stepsEl.addEventListener("click",e=>{const b=e.target.closest(".stepbtn");if(b)showStep(+b.dataset.i)});
+showStep(0);
+
+/* ---------- Territory ---------- */
+const SEGS=[
+ {code:"BNK",name:"Banking & capital markets",who:"CIO, Chief AI or Data Officer, Head of Operations, CISO",
+  stack:"Microsoft 365 alongside Salesforce, ServiceNow, Confluence, Jira, Symphony and decades of acquired systems.",
+  why:"Copilot pilots are up for review, NYDFS Part 500 raises the bar on access and audit, and information barriers make permission-aware AI a requirement.",
+  land:"Engineering and IT service desk, or a research assistant for one front-office desk",
+  exp:"Firm-wide Assistant, then governed agents for operations and client service",
+  acc:["JPMorgan Chase","Citi","Morgan Stanley","BNY","Jefferies","Mizuho Americas"]},
+ {code:"INS",name:"Insurance",who:"CIO, COO, Head of Claims, Chief Underwriting Officer",
+  stack:"Policy and claims cores, SharePoint, Salesforce, underwriting guides and years of prior filings.",
+  why:"Claims and service knowledge is spread across systems, and experienced underwriters are retiring with what they know.",
+  land:"Claims or service desk knowledge for one line of business",
+  exp:"Underwriting and broker-service agents with audit-ready summaries",
+  acc:["MetLife","AIG","New York Life","TIAA","Guardian","Chubb"]},
+ {code:"HLS",name:"Healthcare & life sciences",who:"CIO, Chief Digital Officer, Head of R&D Operations, Chief Compliance Officer",
+  stack:"Microsoft 365, Veeva, Salesforce, ServiceNow, research and regulatory document systems, and decades of acquired companies.",
+  why:"R&D, regulatory and commercial knowledge is split across systems and teams, and GxP and HIPAA rules make permission-aware AI a requirement.",
+  land:"Regulatory and quality document search for one function, or a field medical and commercial assistant",
+  exp:"R&D knowledge agents, submission prep, commercial and medical affairs",
+  acc:["Johnson & Johnson","Pfizer","Bristol Myers Squibb","Merck","Regeneron","Northwell Health"]},
+ {code:"AWM",name:"Asset management & alternatives",who:"COO, CTO, Head of Investment Research, Head of Investor Relations",
+  stack:"Research notes, FactSet and S&P data, CRM, data rooms, and libraries of past DDQ and RFP answers.",
+  why:"Glean's financial services MCP ecosystem now brings FactSet, S&P Global, CB Insights, Crunchbase and Daloopa into governed workflows.",
+  land:"A DDQ and RFP response agent, or investment committee memo prep",
+  exp:"Research, portfolio monitoring and client reporting",
+  acc:["BlackRock","Blackstone","KKR","Apollo","Neuberger Berman","Two Sigma"]},
+ {code:"MED",name:"Media & advertising",who:"CIO, CTO, Chief Revenue Officer, Head of Editorial Operations",
+  stack:"Google Workspace or Microsoft 365, Salesforce, content archives and digital asset systems.",
+  why:"TIME went live in three weeks and uses Glean for research and ad-sales pitch prep, which is the pattern for every publisher and agency.",
+  land:"Ad-sales pitch prep or archive research",
+  exp:"Editorial research agents, ad operations and client service",
+  acc:["Paramount","Condé Nast","Dow Jones","Omnicom","Warner Music Group","Hearst"]},
+ {code:"PRO",name:"Law & professional services",who:"CIO, COO, Chief Knowledge Officer, General Counsel",
+  stack:"Document management systems, precedent banks, client and matter files, time and billing.",
+  why:"Knowledge is what clients pay for, and matter-level permissions are strict. Firm-wide AI only works if it respects them.",
+  land:"Precedent and expertise search for one practice group",
+  exp:"Firm-wide knowledge agents and client-team workspaces",
+  acc:["Marsh McLennan","Moody's","Paul, Weiss","Skadden","Simpson Thacher","Cravath"]}
+];
+const segsEl=document.getElementById("segs"), segP=document.getElementById("segpanel");
+segsEl.innerHTML=SEGS.map((s,i)=>`<button class="segbtn" type="button" role="tab" data-i="${i}"><code>${s.code}</code>${s.name}</button>`).join("");
+function showSeg(i){
+  const s=SEGS[i];
+  segsEl.querySelectorAll(".segbtn").forEach((b,j)=>{b.classList.toggle("on",j===i);b.setAttribute("aria-selected",j===i)});
+  segP.innerHTML=`<div><span class="eyebrow"><b>${s.code}</b>${s.name}</span></div>
+   <div class="row"><div><h4>Who buys</h4><p>${s.who}</p></div><div><h4>What they run</h4><p>${s.stack}</p></div><div><h4>Why now</h4><p>${s.why}</p></div></div>
+   <div class="landexp"><b>Land</b><span>${s.land}</span><b>Expand</b><span>${s.exp}</span></div>
+   <div><h4 style="margin-bottom:8px">Example accounts</h4><div class="chips">${s.acc.map(a=>`<span class="chip">${a}</span>`).join("")}</div></div>`;
+}
+segsEl.addEventListener("click",e=>{const b=e.target.closest(".segbtn");if(b)showSeg(+b.dataset.i)});
+showSeg(0);
+
+/* ---------- Plays ---------- */
+const v=x=>`<code>{{${x}}}</code>`;
+const PLAYS=[
+ {tab:"Beyond Microsoft",thesis:"Copilot sees Microsoft. The firm's knowledge lives everywhere.",
+  who:"Microsoft-standard banks, insurers and law firms with a Copilot pilot in flight.",
+  data:[v("copilot_signal")+", a Copilot pilot or rollout named in press, earnings or job posts",v("other_apps")+", Salesforce, ServiceNow, Confluence or Jira from job posts and stack data",v("ai_leader")+", a named Chief AI Officer or AI center of excellence lead"],
+  personas:"Chief AI Officer or CIO first, then the Copilot program owner.",
+  disc:["What share of your knowledge lives outside Microsoft 365?","How is weekly usage trending on the pilot?","What would have to be true to expand AI firm-wide?"],
+  to:"Chief AI Officer",subj:["{{company}} and AI adoption","What the pilot can't see","Context layer opp"],
+  emails:[
+   ["Day 1",`${v("first_name")}, most banks I work with have a Copilot pilot, and most of their knowledge sits outside Microsoft: ${v("other_apps")}, research systems and Slack.`,`Booking.com uses Glean to unify its Microsoft ecosystem with every other internal source, so AI answers reflect the whole company.`,`Worth 20 minutes on lifting adoption without replacing what you already bought?`],
+   ["Day 3, bump",`${v("first_name")}, a scoped test: run Copilot alone and Copilot with Glean context on the same questions for one department, and compare the answers side by side.`,`Think it's worth a look?`],
+   ["Day 8, breakup",`${v("first_name")}, last note from me. If adoption is already where you want it, ignore this.`,`If not, happy to share how other firms run Copilot and Glean side by side. No worries either way.`]],
+  proof:"Booking.com, Microsoft ecosystem unified with every internal source; financial software provider, 33 sources in one search",value:"Higher adoption on AI already bought"},
+ {tab:"AI cost per task",thesis:"The AI bill is climbing and nobody can name the cost per task.",
+  who:"Firms paying for several AI tools with usage growing faster than budgets.",
+  data:[v("ai_tools")+", ChatGPT, Claude, Copilot or Gemini licenses from press and job posts",v("finops")+", who owns AI spend: FinOps, the CTO or the CFO",v("cfo_comment")+", AI spend comments on earnings calls or investor days"],
+  personas:"CTO and CFO first, then FinOps and the AI center of excellence.",
+  disc:["Do you know your cost per AI task, and which model it should run on?","How many AI tools are you paying for today?","Who sets AI budgets by team?"],
+  to:"CTO",subj:["{{company}} AI spend","Cost per task","AI cost opp"],
+  emails:[
+   ["Day 1",`${v("first_name")}, most CTOs I meet can tell me their AI bill but not their cost per task.`,`In Glean's own benchmark, grounded context and model routing cut token cost 81% against Claude Cowork, and Glean's answers were preferred 78% of the time.`,`Worth 20 minutes to test that on your workloads instead of ours?`],
+   ["Day 3, bump",`${v("first_name")}, we'd make cost per task a written success criterion, alongside weekly usage and hours saved, so the numbers are yours.`,`Open to it?`],
+   ["Day 8, breakup",`${v("first_name")}, last note from me. Seems like 2027 AI budgets are settled?`,`If not, happy to share how others set team budgets through one AI gateway. No worries if not.`]],
+  proof:"Glean benchmark, $0.58 vs. $2.98 per query; auto routing across 40+ models",value:"Lower AI cost without lower quality"},
+ {tab:"Governed agents",thesis:"Agents are moving to production, and model risk wants one platform it can approve.",
+  who:"Banks, insurers and asset managers under NYDFS and model risk rules.",
+  data:[v("mrm_lead")+", the model risk or AI governance leader",v("agent_pilots")+", agent pilots named in press, conference talks or job posts",v("reg_driver")+", NYDFS Part 500 or the firm's model risk framework"],
+  personas:"CISO and Chief Risk Officer first, then the AI center of excellence.",
+  disc:["How many agent pilots are running, and who approved them?","Can you show which sources informed an AI answer?","What does model risk need before an agent goes to production?"],
+  to:"CISO",subj:["{{company}} agent governance","One control plane","Agent governance opp"],
+  emails:[
+   ["Day 1",`${v("first_name")}, agent pilots are multiplying at most firms I speak with, each with its own access rules and audit gaps.`,`Glean's agents only see what each employee is allowed to see, and every answer records the sources behind it for review.`,`Worth 20 minutes before more pilots go live?`],
+   ["Day 3, bump",`${v("first_name")}, Glean published a seven-stage agent lifecycle in May, from opportunity to monitoring. Happy to map it to your ${v("reg_driver")} controls.`,`Would that help your next review?`],
+   ["Day 8, breakup",`${v("first_name")}, last note from me. If agent governance is in hand, no worries.`,`If not, I can send the access policy and audit overview for your next risk committee.`]],
+  proof:"Enterprise Agent Development Lifecycle; Gartner Market Shaper for no-code agent builders, 2026",value:"Faster approval, fewer ungoverned tools"},
+ {tab:"Front-office knowledge",thesis:"The edge in research and client service is what the firm already knows.",
+  who:"Asset managers, alternatives firms and capital markets desks.",
+  data:[v("data_vendors")+", FactSet, S&P Global, CB Insights or Crunchbase in use",v("ddq_team")+", the size of the DDQ, RFP or investor relations team",v("fund_event")+", a recent fund close, launch or capital raise"],
+  personas:"COO and Head of Investment Research first, then investor relations.",
+  disc:["How long does a DDQ or investment committee memo take today?","Where does research live, and who can see it?","What would analysts do with an extra hour a day?"],
+  to:"COO",subj:["{{company}} research and DDQs","IC prep in hours","Front-office opp"],
+  emails:[
+   ["Day 1",`${v("first_name")}, congratulations on ${v("fund_event")}. Most firms I talk with rebuild the same DDQ and IC answers from scattered research and past responses.`,`Glean now brings ${v("data_vendors")} data into the same permission-aware workflows as internal research and prior answers.`,`Worth 20 minutes on cutting DDQ and IC prep time?`],
+   ["Day 3, bump",`${v("first_name")}, a scoped start: one agent drafts DDQ answers from your past responses, with every source cited for compliance review.`,`Worth a look?`],
+   ["Day 8, breakup",`${v("first_name")}, last note from me. Happy to send a short brief on how investment teams use governed AI.`,`No worries if not.`]],
+  proof:"Financial services MCP ecosystem with FactSet, S&P Global, CB Insights, Crunchbase and Daloopa, June 2026",value:"Faster research and client response"}
+];
+const tabsEl=document.getElementById("playtabs"), ppEl=document.getElementById("playpanel");
+tabsEl.innerHTML=PLAYS.map((p,i)=>`<button class="tab" type="button" role="tab" data-i="${i}">${p.tab}</button>`).join("");
+function showPlay(i){
+  const p=PLAYS[i];
+  tabsEl.querySelectorAll(".tab").forEach((b,j)=>{b.classList.toggle("on",j===i);b.setAttribute("aria-selected",j===i)});
+  ppEl.innerHTML=`<div class="playpanel"><div class="meta">
+     <div><p class="thesis">${p.thesis}</p></div>
+     <div><h4>Who</h4><p>${p.who}</p></div>
+     <div><h4>Data the AE pulls</h4><ul>${p.data.map(d=>`<li>${d}</li>`).join("")}</ul></div>
+     <div><h4>Personas</h4><p>${p.personas}</p></div>
+     <div><h4>Discovery</h4><ul>${p.disc.map(d=>`<li>${d}</li>`).join("")}</ul></div>
+     <div class="proofline"><span><b>Proof</b> ${p.proof}</span><span><b>Value</b> ${p.value}</span></div>
+   </div>
+   <div class="emails">${p.emails.map((e,k)=>`<article class="email"><header><span>To: ${p.to}</span><span>Subject: ${p.subj[k]}</span><span>${e[0]}</span></header><div class="body">${e.slice(1).map(x=>`<p>${x}</p>`).join("")}</div></article>`).join("")}</div></div>`;
+}
+tabsEl.addEventListener("click",e=>{const b=e.target.closest(".tab");if(b)showPlay(+b.dataset.i)});
+showPlay(0);
+
+/* ---------- Battlecards ---------- */
+const BC=[
+ {n:"ChatGPT and Claude Enterprise",s:"Lab workspaces with connectors",tag:"Main competitor",
+  strong:"Frontier models, strong output for finished deliverables, real employee pull, and heavy investment in enterprise sales.",
+  win:"Their connectors run federated search: live queries, one app at a time, with every result sent to an expensive model. Glean keeps a ranked, permission-aware index and routes routine tasks to cheaper models. Enterprises value supplier continuity, and Glean lets them change models without rebuilding their context. Glean can also sit underneath a lab assistant, so it is not either-or.",
+  ask:"Do you know your cost per AI task, and what happens to your context if you switch models next year?"},
+ {n:"Microsoft 365 Copilot",s:"Bundled in Microsoft agreements",tag:"Hunting ground",
+  strong:"Already licensed in many E3 and E5 agreements, built into Word, Excel, Outlook and Teams, and governed by Purview and Entra.",
+  win:"Many Copilot pilots disappoint, which makes them good hunting ground. Run a side-by-side: Copilot alone vs. Copilot with Glean context. Copilot sees Microsoft; Glean sees the enterprise, with 275+ turnkey connectors and permissions enforced on every item. We coexist first, then expand.",
+  ask:"What share of your knowledge lives outside Microsoft 365, and how is weekly usage trending on the pilot?"},
+ {n:"Google and AWS credits",s:"Free tokens and compute",tag:"Late-stage spoiler",
+  strong:"Deep pockets, existing cloud commitments and close relationships with the CIO and procurement.",
+  win:"Credits buy a model, not context. Get the economic buyer committed to a business outcome before credits appear, and take a shorter first term if needed. Expansion is proven at Glean, so the land is what matters.",
+  ask:"If the tokens were free, who would connect them to your firm's knowledge with permissions intact?"},
+ {n:"Build your own",s:"Retrieval on Azure OpenAI or Bedrock",tag:"Engineering-led",
+  strong:"Full control, talented engineers and committed cloud spend to draw down.",
+  win:"Connectors, permission sync, ranking and evaluation are years of work, and they never stop. Glean has done that work, and its APIs let the firm's engineers spend their time on firm-specific agents.",
+  ask:"Who maintains the connectors and permission sync in year three?"},
+ {n:"Status quo",s:"Wait and see",tag:"Doing nothing",
+  strong:"No new vendor review this year.",
+  win:"Employees keep losing hours to search, new hires ramp slowly, and shadow AI grows anyway. Forrester's Glean-commissioned study found payback in under six months.",
+  ask:"What are employees pasting into public AI tools today?"}
+];
+const bcl=document.getElementById("bclist"), bcp=document.getElementById("bcpanel");
+bcl.innerHTML=BC.map((b,i)=>`<button class="bcbtn" type="button" data-i="${i}"><b>${b.n}</b><span>${b.s}</span></button>`).join("");
+function showBC(i){
+  const b=BC[i];
+  bcl.querySelectorAll(".bcbtn").forEach((x,j)=>{x.classList.toggle("on",j===i);x.setAttribute("aria-pressed",j===i)});
+  bcp.innerHTML=`<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><h3>${b.n}</h3><span class="pill">${b.tag}</span></div>
+   <div class="grid"><div><h4>Where they are strong</h4><p>${b.strong}</p></div><div><h4>Where Glean wins</h4><p>${b.win}</p></div></div>
+   <div class="ask"><h4>The question we ask</h4><p>${b.ask}</p></div>`;
+}
+bcl.addEventListener("click",e=>{const b=e.target.closest(".bcbtn");if(b)showBC(+b.dataset.i)});
+showBC(0);
+
+/* ---------- MEDDPICC ---------- */
+const MED=[
+ ["M","Metrics","The number the deal is sold on","Productivity claims nobody has priced.",
+  "Weekly active use, hours saved on named workflows, cost per AI task. Never queries or licenses deployed.","How many hours a week does your team spend finding what the firm already knows?","A baseline from a short survey and pilot telemetry, confirmed by the sponsor.","Bring the closest reference (Wealthsimple, TIME or the financial software provider) and ask them to correct it for their firm."],
+ ["E","Economic buyer","Who can say yes alone","Only the AI team involved by M2.",
+  "CIO, COO or Chief AI Officer, with the CFO on multiyear commits.","Who owns the AI budget for 2027?","A meeting with the economic buyer before success criteria are final.","Ask the champion for 20 minutes with the CIO to agree the readout date."],
+ ["D","Decision criteria","How they judge us","Criteria copied from a Copilot seat deal.",
+  "Connector coverage, permission fidelity, model choice, governance, measured adoption, cost per task.","What has to be true for Glean to be the clear choice?","Written success criteria agreed before the pilot starts.","Reshape criteria around coverage beyond Microsoft and measured usage."],
+ ["D","Decision process","Every step to signature","Nobody can describe what follows the pilot.",
+  "Security review, TPRM, model risk, and a production approval path for each connected system with its owner.","Walk me through how you approved your last AI platform.","A mutual action plan dated back from signature, including each system approval.","Map the post-pilot steps and every system owner with the champion on day one."],
+ ["P","Paper process","How the contract gets signed","Procurement hears about it at quarter end.",
+  "MSA, DPA, security questionnaire, TPRM package, cloud marketplace or direct.","Would buying through your cloud marketplace help draw down committed spend?","Security package sent at M2 and a signature date agreed.","Bring procurement in as soon as the business case is agreed."],
+ ["I","Identify pain","Why they act this year","Pain with no cost and no deadline.",
+  "Stalled Copilot adoption, rising AI spend, shadow AI, knowledge loss as people retire.","What happens if adoption is the same at next year's renewal?","Pain tied to a dollar figure, a date and an owner.","Tie it to a renewal, a budget cycle or an audit."],
+ ["C","Champion","Sells when we are not in the room","A fan with no pull on the decision.",
+  "An AI or knowledge leader with influence who gains from the win.","How would you present the pilot results to your CIO?","They ran the pilot and got us a meeting we could not get alone.","Keep them close and multithread to the CIO, CISO and finance."],
+ ["C","Competition","Every option they could pick","We learn about the alternative at proposal.",
+  "Copilot, the lab workspaces, Gemini, an internal build and doing nothing, each with its sponsor.","If you don't choose us, what do you do instead?","Each alternative named with its sponsor.","Ask the battlecard questions in discovery so criteria reflect where Glean wins."]
+];
+const medEl=document.getElementById("med");
+const front=m=>`<span class="L">${m[0]}</span><span class="nm">${m[1]}</span><span class="sub">${m[2]}</span><span class="red"><b>Red flag</b> ${m[3]}</span><span class="flipcue">Select to flip</span>`;
+const back=m=>`<span class="L">${m[0]}</span><div class="back"><div><i>What we validate</i><span>${m[4]}</span></div><div><i>What we ask</i><span>${m[5]}</span></div><div><i>Proof we collect</i><span>${m[6]}</span></div><div><i>Our move</i><span>${m[7]}</span></div></div>`;
+medEl.innerHTML=MED.map((m,i)=>`<button class="card" type="button" data-i="${i}" aria-pressed="false" aria-label="${m[1]}">${front(m)}</button>`).join("");
+function setCard(el,on){const m=MED[+el.dataset.i];el.classList.toggle("flipped",on);el.setAttribute("aria-pressed",on);el.innerHTML=on?back(m):front(m);el.classList.add("pop");setTimeout(()=>el.classList.remove("pop"),180)}
+medEl.addEventListener("click",e=>{const c=e.target.closest(".card");if(c)setCard(c,!c.classList.contains("flipped"))});
+const fa=document.getElementById("flipall");
+fa.addEventListener("click",()=>{const cards=[...medEl.querySelectorAll(".card")];const anyFront=cards.some(c=>!c.classList.contains("flipped"));cards.forEach(c=>setCard(c,anyFront));fa.textContent=anyFront?"Flip all back":"Flip all"});
+
+/* ---------- Principles ---------- */
+const P=[
+ {k:"Coverage",sub:"What the AI can see",loc:"Queries each app live at question time, skips some, and waits on the slowest.",cld:"Indexes content, people, permissions and activity from 275+ apps ahead of time, and fetches live data through MCP for apps outside the index.",care:"Answers reflect the whole firm, quickly, every time."},
+ {k:"Relevance",sub:"Finding what people mean",loc:"Matches words, so \"setup flow\", \"provisioning\" and \"onboarding\" come back as different things and answers are missed.",cld:"A knowledge graph links documents to the people, teams and customers behind them, and updates as people work.",care:"People trust answers that find what they meant, not only what they typed."},
+ {k:"Freshness",sub:"Which version wins",loc:"Picks the file labeled \"final\" that nobody has touched since March.",cld:"Scores every candidate on relevance, freshness and who is asking, so the sheet the team uses every day wins.",care:"Stale answers kill adoption faster than missing ones."},
+ {k:"Permissions",sub:"Who sees what",loc:"Access rules vary by connector and are hard to audit.",cld:"Every result honors source-system permissions. Glean Protect hides overshared sensitive files and can block questions that break policy.",care:"In a bank or a law firm, one leaked deal file ends the program."},
+ {k:"Cost",sub:"What each task costs",loc:"Sends every result to an expensive model at once, which guesses what matters and pays for every token.",cld:"Ranks before any model sees a word, passes only targeted snippets, and routes each task to the right model, open-source ones included.",care:"CFOs want cost per task. We prove it on the customer's own work."},
+ {k:"Action",sub:"From answers to work",loc:"Answers a question, then hands the work back to the person.",cld:"Agents create Jira issues, update Salesforce and post to Slack under the user's own permissions, with optional review before they act.",care:"Governed agents turn knowledge into finished work, which is where expansion comes from."}
+];
+const list=document.getElementById("prinlist"), panel=document.getElementById("prinpanel");
+P.forEach((p,i)=>{const b=document.createElement("button");b.className="bcbtn";b.type="button";b.id="prin-"+i;b.setAttribute("role","tab");b.innerHTML=`<b>${i+1}. ${p.k}</b><span>${p.sub}</span>`;b.addEventListener("click",()=>show(i));list.appendChild(b)});
+function show(i){const p=P[i];
+ list.querySelectorAll(".bcbtn").forEach((b,j)=>{b.classList.toggle("on",j===i);b.setAttribute("aria-selected",j===i)});
+ panel.innerHTML=`<div class="vs"><div class="loc"><h4>Federated search</h4><p>${p.loc}</p></div><div class="cld"><h4>Glean's index</h4><p>${p.cld}</p></div></div><div class="care"><h4>Why an enterprise cares</h4><p>${p.care}</p></div>`;}
+list.addEventListener("keydown",e=>{const bs=[...list.querySelectorAll(".bcbtn")];const i=bs.indexOf(document.activeElement);if(i<0)return;let j=null;if(e.key==="ArrowDown"||e.key==="ArrowRight")j=(i+1)%bs.length;if(e.key==="ArrowUp"||e.key==="ArrowLeft")j=(i-1+bs.length)%bs.length;if(j!==null){e.preventDefault();bs[j].focus();show(j)}});
+show(0);
+
+/* ---------- Copy + nav highlight ---------- */
+document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",()=>{
+  const el=document.getElementById(b.dataset.copy), t=el.textContent.trim();
+  const label=b.textContent;const done=()=>{b.textContent="Copied";setTimeout(()=>b.textContent=label,1600)};
+  try{navigator.clipboard.writeText(t).then(done,()=>{selectEl(el)})}catch(e){selectEl(el)}
+}));
+function selectEl(el){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r)}
+const links=[...document.querySelectorAll("#navlist a")];
+if("IntersectionObserver" in window){
+  const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+en.target.id))}})},{rootMargin:"-45% 0px -50% 0px"});
+  ["top","heard","why","glean","competition","sell","deal","team","plan","record"].forEach(id=>{const s=document.getElementById(id);if(s)io.observe(s)});
+}
+})();
+</script>
+
+</body>
+</html>
