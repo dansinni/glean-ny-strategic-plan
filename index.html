@@ -487,7 +487,7 @@ mark.hl{background:linear-gradient(to bottom,transparent 0 22%,var(--lime) 22% 9
       <li><a href="#top">Overview</a></li>
       <li><a href="#heard">What I heard</a></li>
       <li><a href="#why">Why New York</a></li>
-      <li><a href="#glean">Why Glean</a></li>
+      <li><a href="#why-glean">Why Glean</a></li>
       <li><a href="#competition">Competition</a></li>
       <li><a href="#sell">How we sell</a></li>
       <li><a href="#deal">Deal</a></li>
@@ -549,7 +549,7 @@ mark.hl{background:linear-gradient(to bottom,transparent 0 22%,var(--lime) 22% 9
 </section>
 
 <!-- WHY GLEAN -->
-<section id="glean">
+<section id="why-glean">
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><b>03</b>Why context, and why Glean</span><h2>Models are becoming a commodity. Enterprise context is not.</h2><p class="lede">Any enterprise can buy a frontier model. No one can buy a permission-aware picture of how their own firm works. Glean builds that context once and puts it under every assistant, agent and model the firm uses.</p></div>
 
@@ -1056,7 +1056,7 @@ function selectEl(el){const r=document.createRange();r.selectNodeContents(el);co
 const links=[...document.querySelectorAll("#navlist a")];
 if("IntersectionObserver" in window){
   const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+en.target.id))}})},{rootMargin:"-45% 0px -50% 0px"});
-  ["top","heard","why","glean","competition","sell","deal","team","plan","record"].forEach(id=>{const s=document.getElementById(id);if(s)io.observe(s)});
+  ["top","heard","why","why-glean","competition","sell","deal","team","plan","record"].forEach(id=>{const s=document.getElementById(id);if(s)io.observe(s)});
 }
 })();
 </script>
